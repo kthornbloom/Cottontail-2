@@ -14,17 +14,11 @@ $margin:30px;
 
 /* GRID SYSTEM
 =========================================*/
-body {
-	background: #eee;
-}
-
 .row, .row-512, .row-720, .row-960, .row-stepped-512, .row-stepped-720, .row-stepped-960 {
 	display: flex;
 	flex-wrap:wrap;
 }
 .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
-	background: #fff;
-	box-shadow:inset 0 0 1px #000;
 }
 .col-1 {width:8.33%}
 .col-2 {width:16.66%}
@@ -43,7 +37,6 @@ body {
 	margin:0 0 0 -#{$margin};
 	.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
 		margin:0 0 $margin $margin;
-		padding:$padding;
 	}
 	.col-1 {width:calc(8.33% - #{$margin})}
 	.col-2 {width:calc(16.66% - #{$margin})}
@@ -59,6 +52,9 @@ body {
 	.col-12 {width:calc(100% - #{$margin})}
 }
 
+.padded {
+	padding:$padding;
+}
 .align-br {
 	display: flex;
 	align-items:flex-end;
@@ -274,3 +270,8 @@ body {
 	top:auto!important;
 	bottom:0;
 }
+
+/* IMPORT
+=========================================*/
+@import 'nav';
+@import 'addon-text';

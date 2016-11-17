@@ -1,50 +1,108 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<!-- Meta ===================================================== -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta charset='utf-8'>
-		<title>Page Title</title>
-		<meta name="description" content="">
+<head>
+	<!-- Meta ===================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset='utf-8'>
+	<title>Page Title</title>
+	<meta name="description" content="">
 
-		<!-- Favicon  ================================================= -->
-		<link rel="icon" href="favicon.png">
+	<!-- Favicon  ================================================= -->
+	<link rel="icon" href="favicon.png">
 
-		<!-- CSS ====================================================== -->
-		<link rel="stylesheet" href="css/build/stylesheet.min.css">
-	</head>
-	<body>
+	<!-- CSS ====================================================== -->
+	<link rel="stylesheet" href="css/build/stylesheet.min.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<nav id="nav-desktop">
+		<ul>
+			<li><a href="#">Normal</a></li>
+			<li><a href="#">Nav Only</a>
+				<!-- Dropdowns can ONLY be be placed under nav-only pages -->
+				<ul>
+					<li><a href="#">Lvl 1</a></li>
+					<li><a href="#">Lvl 1</a></li>
+					<li><a href="#">Lvl 1</a>
+						<ul>
+							<li><a href="#">Lvl 2</a></li>
+							<li><a href="#">Lvl 2</a></li>
+							<li><a href="#">Lvl 2</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><a href="http://www.google.com">External</a></li>
+			<li><a href="example.pdf">Document</a></li>
+		</ul>
+	</nav>
+
 	<div class="row spaced">
-		<div class="col-4">1</div>
-		<div class="col-4">2</div>
-		<div class="col-4">3</div>
-	</div>
-	<div class="row-512 spaced">
-		<div class="col-2">1</div>
-		<div class="col-5">2</div>
-		<div class="col-5">3</div>
-	</div>
-	<div class="row-stepped-720 spaced nonspaced-720">
-		<div class="col-6">3<br>hey<br>stuff<br>blamo</div>
-		<div class="col-6 align-cr align-c-720">hey</div>
-	</div>
-	<div class="row-512">
-		<div class="col-4 align-c">1</div>
-		<div class="col-4 align-c">2</div>
-		<div class="col-4 align-c">3</div>
-	</div>
+		<div class="col-6 padded addon-text">
+			<h1>Auto Ratio Embeds</h1>
+			<a href="https://github.com/chriscoyier/Fluid-Width-Video/issues/4">https://github.com/chriscoyier/Fluid-Width-Video/issues/4</a>
+			<h1>Heading One</h1>
+			This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet. You'll be able to manage this text, format it with various styles, and place other elements within this space. Once again, this is simply 'filler' and is only being used to show what this layout looks like with content before we actually have it. <strong>Bold</strong>, <em>underline</em>, <i>italic</i>, <strike>strike</strike>, <a href="#">link</a> 12<sup>th</sup>, H<sub>2</sub>O<sub>2</sub>.
+			<h2>Heading Two</h2>
+			This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet.
+			<ul>
+				<li>Unordered List</li>
+				<li>Unordered List</li>
+			</ul>
+			<ol>
+				<li>Ordered List</li>
+				<li>Ordered List</li>
+			</ol>
+			<h3>Heading Three</h3>
+			This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet. You'll be able to manage this text, format it with various styles, and place other elements within this space.
+			<blockquote>Wow, a very important quotetext. It will get replaced with your actual content later on. We use this sample!</blockquote>
 
-	HOW DO I ALLOW PADDING TO BE REMOVED ON MOBILE?? ARG
+			<h4>Heading Four</h4>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th>Testing</th>
+						<th>Normal</th>
+						<th>Table</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>HereIsAnExampleOfAVeryLongTableCell</td>
+					<td>Table Cell</td>
+					<td>Table Cell</td>
+				</tr>
+				<tr>
+					<td>Table Cell</td>
+					<td>Table Cell</td>
+					<td>Table Cell</td>
+				</tr>
+				<tr>
+					<td>Table Cell</td>
+					<td>Table Cell</td>
+					<td>Table Cell</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-6">
+			<div class="row">
+				<div class="col-12 padded">Example</div>
+				<div class="col-12 padded">Example</div>
+				<div class="col-12 padded">Example</div>
+			</div>
+		</div>
+	</div>
+</div><!-- end .wrapper-->
 
-		<!-- JS ======================================================= -->
-		<script type="text/javascript" src="js/lib/jquery-3.1.1.min.js" ></script>
-		<script type="text/javascript" src="js/lib/jquery.easing.js" ></script>
-		<script type="text/javascript" src="js/build/production.min.js"></script>
+<!-- JS ======================================================= -->
+<script type="text/javascript" src="js/lib/jquery-3.1.1.min.js" ></script>
+<script type="text/javascript" src="js/lib/jquery.easing.js" ></script>
+<script type="text/javascript" src="js/build/production.min.js"></script>
 
-		<script type="text/javascript">
-			$(window).load( function() {
-				//
-			});
-		</script>
-	</body>
+<script type="text/javascript">
+	$(window).on('load', function() {
+		//
+	});
+</script>
+</body>
 </html>
