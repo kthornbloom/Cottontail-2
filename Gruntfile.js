@@ -8,9 +8,9 @@ module.exports = function(grunt) {
 		concat: {
 			dist: {
 				src: [
-					'js/src/*.js'
+					'Cottontail-2/js/src/*.js'
 				],
-				dest: 'js/build/production.js'
+				dest: 'Cottontail-2/js/build/production.js'
 			}
 		},
 
@@ -18,8 +18,8 @@ module.exports = function(grunt) {
 		=========================================*/
 		uglify: {
 			build: {
-				src: 'js/build/production.js',
-				dest: 'js/build/production.min.js'
+				src: 'Cottontail-2/js/build/production.js',
+				dest: 'Cottontail-2/js/build/production.min.js'
 			}
 		},
 
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					'css/build/stylesheet.css': 'css/src/~global.scss'
+					'Cottontail-2/css/build/stylesheet.css': 'Cottontail-2/css/src/~global.scss'
 				}
 			}
 		},
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 		=========================================*/
 		autoprefixer: {
             dist: {
-                src: 'css/build/stylesheet.css'
+                src: 'Cottontail-2/css/build/stylesheet.css'
             }
         },
 
@@ -47,9 +47,9 @@ module.exports = function(grunt) {
 			target: {
 				files: [{
 					expand: true,
-					cwd: 'css/build',
+					cwd: 'Cottontail-2/css/build',
 					src: ['*.css', '!*.min.css'],
-					dest: 'css/build',
+					dest: 'Cottontail-2/css/build',
 					ext: '.min.css'
 				}]
 			}
@@ -59,21 +59,21 @@ module.exports = function(grunt) {
 		=========================================*/
 		watch: {
 			scripts: {
-				files: ['js/*.js'],
+				files: ['Cottontail-2/js/*.js'],
 				tasks: ['concat', 'uglify'],
 				options: {
 					spawn: false
 				},
 			},
 			css: {
-				files: ['css/src/*.scss'],
+				files: ['Cottontail-2/css/src/*.scss'],
 				tasks: ['sass','autoprefixer','cssmin'],
 				options: {
 				  spawn: false
 				}
 			},
 			js: {
-				files: ['js/src/*.js'],
+				files: ['Cottontail-2/js/src/*.js'],
 				tasks: ['concat','uglify'],
 				options: {
 				  spawn: false

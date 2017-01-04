@@ -1,0 +1,37 @@
+.accordion-topic {
+	padding:1em 1em 1em 0;
+	background:rgba(0,0,0,.1);
+	margin-bottom: 1px;
+	cursor: pointer;
+	&:before {
+		content: '+';
+		font-weight: 700;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		font-size: 1.2em;
+		background: #fff;
+		color: #555;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 1em;
+		margin: 0 1em;
+		transition:$transition-short;
+	}
+}
+.accordion-topic:hover,
+.accordion-open {
+	background:rgba(0,0,0,.15);
+	&:before {
+		color:#222;
+	}
+}
+.accordion-open:before {
+	transform:rotate(45deg);
+}
+.accordion-result {
+	padding:1em 1em 1em 1.5em;
+	background: rgba(0,0,0,.05);
+	font-size:.9em;
+	display: none;
+}

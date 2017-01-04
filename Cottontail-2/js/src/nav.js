@@ -1,5 +1,5 @@
 /* Function for determining if a link is external
-=========================================*/
+=========================================
 
 var isExternalRegexClosure = (function(){
 	var domainRe = /https?:\/\/((?:[\w\d-]+\.)+[\w\d]{2,})/i;
@@ -15,7 +15,7 @@ var isExternalRegexClosure = (function(){
 
 $('nav a').each(function(){
 	var href = $(this).attr(href);
-});
+});*/
 
 /* auto add icons (or classes) for external & document links*/
 /* auto add arrows for dropdowns */

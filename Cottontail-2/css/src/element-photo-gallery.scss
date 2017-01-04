@@ -1,0 +1,124 @@
+.photo-gallery-image {
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top:60%;
+	display: block;
+}
+
+.photo-gallery-caption {
+	text-align: center;
+}
+
+/* OVERLAY
+=========================================*/
+.image-zoom-overlay {
+	background:rgba(0,0,0,.9);
+	position: fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	max-width: 100%;
+	height: 100vh;
+	visibility: none;
+	opacity: 0;
+	transform:scale(1.2);
+	transition:$transition-long;
+	z-index: 100;
+	div {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		transition:opacity .2s;
+		background-size:contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.image-zoom-visible {
+	opacity: 1;
+	transform:scale(1);
+}
+
+/* CLOSE BUTTON
+=========================================*/
+#close-image-zoom {
+	position: absolute;
+	top:0;
+	right:0;
+	width:50px;
+	height: 50px;
+	cursor: pointer;
+}
+#close-image-zoom:before {
+	content:'';
+	display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+	box-shadow: 0 0 7px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+#close-image-zoom:after {
+	@extend #close-image-zoom:before;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/* PREV / NEXT
+=========================================*/
+
+#regress-image-zoom {
+	position: absolute;
+	top:0;
+	left:0;
+	width:50%;
+	height: 100%;
+	opacity: 0;
+	transition: $transition-short;
+}
+
+/* PREV / NEXT ARROWS
+=========================================*/
+#regress-image-zoom:hover {
+	opacity: 1;
+}
+#regress-image-zoom:after {
+	content:'';
+	display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+	box-shadow: 0 0 7px #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+	margin-top:-10px;
+    transform: rotate(-45deg);
+}
+#regress-image-zoom:before {
+	@extend #regress-image-zoom:after;
+	margin-top:10px;
+	transform: rotate(45deg);
+}
+
+#advance-image-zoom {
+	@extend #regress-image-zoom;
+	left:auto;
+	right:0;
+}
+
+#advance-image-zoom:after {
+	left:auto;
+	right:0;
+	transform: rotate(45deg);
+}
+
+#advance-image-zoom:before {
+	left:auto;
+	right:0;
+	transform: rotate(-45deg);
+}
