@@ -1,0 +1,54 @@
+.document-list-header {
+	background:rgba(0,0,0,.05);
+	border:1px solid #ccc;
+}
+
+.document-list-title {
+	font-weight:bold;
+	font-size:1.5em;
+}
+
+.document-list-search-wrap {
+	background:rgba(0,0,0,.05);
+}
+.document-list-search {
+	border:0;
+	padding:10px;
+}
+
+.document-list {
+	max-height:50vh;
+	overflow: auto;
+	a:link, a:visited {
+		display:block;
+		height:3em;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		font-size:.9em;
+		border:1px solid #ccc;
+		border-top:0;
+		&:before {
+			content:'\e03c';
+			font-family:Icons;
+			display:inline-block;
+			vertical-align:middle;
+			position: relative;
+			height:100%;
+			background:rgba(0,0,0,.2);
+			color:#fff;
+			overflow: hidden;
+			font-size: 18px;
+			padding-top: .5rem;
+			text-align:center;
+			width:0;
+			margin-right:1rem;
+			transition:$transition-short;
+		}
+	}
+	a:hover {
+		background:rgba(0,0,0,.1);
+		&:before {
+			width:2.5rem;
+		}
+	}
+}

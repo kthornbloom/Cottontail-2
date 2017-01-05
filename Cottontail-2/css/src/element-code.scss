@@ -1,0 +1,14 @@
+.element-code {
+	pre {
+		background:repeating-linear-gradient(to bottom, #000 0, #000 1.5rem, #222 1.5rem, #222 3rem );
+		padding:0;
+		margin:0;
+		line-height:1.5rem;
+	}
+	code {
+		color:#fff;
+		font-family:monospaced;
+		font-size:1rem;
+		line-height:1.5rem;
+	}
+}

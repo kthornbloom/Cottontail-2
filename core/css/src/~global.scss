@@ -1,0 +1,277 @@
+@import 'reset';
+
+/* COLORS
+=========================================*/
+$example:#ccc;
+
+/* OTHER VARIABLES
+=========================================*/
+$transition-long:.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$transition-short:.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$padding:30px;
+$margin:30px;
+
+
+/* GRID SYSTEM
+=========================================*/
+.row, .row-512, .row-720, .row-960, .row-stepped-512, .row-stepped-720, .row-stepped-960 {
+	display: flex;
+	flex-wrap:wrap;
+}
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+}
+.col-1 {width:8.33%}
+.col-2 {width:16.66%}
+.col-3 {width:25%}
+.col-4 {width:33.33%}
+.col-5 {width:41.66%}
+.col-6 {width:50%}
+.col-7 {width:58.33%}
+.col-8 {width:66.66%}
+.col-9 {width:75%}
+.col-10 {width:83.33%}
+.col-11 {width:91.66%}
+.col-12 {width:100%}
+
+.spaced {
+	margin:0 0 0 -#{$margin};
+	.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+		margin:0 0 $margin $margin;
+	}
+	.col-1 {width:calc(8.33% - #{$margin})}
+	.col-2 {width:calc(16.66% - #{$margin})}
+	.col-3 {width:calc(25% - #{$margin})}
+	.col-4 {width:calc(33.33% - #{$margin})}
+	.col-5 {width:calc(41.66% - #{$margin})}
+	.col-6 {width:calc(50% - #{$margin})}
+	.col-7 {width:calc(58.33% - #{$margin})}
+	.col-8 {width:calc(66.66% - #{$margin})}
+	.col-9 {width:calc(75% - #{$margin})}
+	.col-10 {width:calc(83.33% - #{$margin})}
+	.col-11 {width:calc(91.66% - #{$margin})}
+	.col-12 {width:calc(100% - #{$margin})}
+}
+
+.padded {
+	padding:$padding;
+}
+.align-br {
+	display: flex;
+	align-items:flex-end;
+	justify-content:flex-end;
+}
+.align-bl {
+	display: flex;
+	align-items:flex-end;
+	justify-content:flex-start;
+}
+.align-tr {
+	display: flex;
+	align-items:flex-start;
+	justify-content:flex-end;
+}
+.align-cr {
+	display: flex;
+	align-items:center;
+	justify-content:flex-end;
+}
+.align-cl {
+	display: flex;
+	align-items:center;
+	justify-content:flex-start;
+}
+.align-c {
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+
+/* MEDIA QUERIES
+=========================================*/
+@media screen and (max-width: 1280px) {
+	.row-stepped-960 {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:50%;
+		}
+	}
+	.row-stepped-960.spaced {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:calc(50% - #{$margin});
+		}
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.row-960 {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:100%;
+			display: block;
+		}
+	}
+	.row-stepped-960 {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:100%;
+		}
+	}
+	.row-stepped-960.spaced {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:calc(100% - #{$margin});
+		}
+	}
+	.row-stepped-720 {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:50%;
+		}
+	}
+	.row-stepped-720.spaced {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:calc(50% - #{$margin});
+		}
+	}
+	.align-br-960 {
+		align-items:flex-end;
+		justify-content:flex-end;
+	}
+	.align-bl-960 {
+		align-items:flex-end;
+		justify-content:flex-start;
+	}
+	.align-tr-960 {
+		align-items:flex-start;
+		justify-content:flex-end;
+	}
+	.align-cr-960 {
+		align-items:center;
+		justify-content:flex-end;
+	}
+	.align-cl-960 {
+		align-items:center;
+		justify-content:flex-start;
+	}
+	.align-c-960 {
+		align-items:center;
+		justify-content:center;
+	}
+}
+@media screen and (max-width: 720px) {
+	.row-720 {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:100%;
+			display: block;
+		}
+	}
+	.row-stepped-720 {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:100%;
+		}
+	}
+	.row-stepped-720.spaced {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:calc(100% - #{$margin});
+		}
+	}
+	.row-stepped-512 {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:50%;
+		}
+	}
+	.row-stepped-512.spaced {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:calc(50% - #{$margin});
+		}
+	}
+	.align-br-720 {
+		align-items:flex-end;
+		justify-content:flex-end;
+	}
+	.align-bl-720 {
+		align-items:flex-end;
+		justify-content:flex-start;
+	}
+	.align-tr-720 {
+		align-items:flex-start;
+		justify-content:flex-end;
+	}
+	.align-cr-720 {
+		align-items:center;
+		justify-content:flex-end;
+	}
+	.align-cl-720 {
+		align-items:center;
+		justify-content:flex-start;
+	}
+	.align-c-720 {
+		align-items:center;
+		justify-content:center;
+	}
+}
+@media screen and (max-width: 512px) {
+	.row-512 {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:100%;
+			display: block;
+		}
+	}
+	.row-stepped-512 {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:100%;
+		}
+	}
+	.row-stepped-512.spaced {
+		.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+			width:calc(100% - #{$margin})
+		}
+	}
+	.align-br-512 {
+		align-items:flex-end;
+		justify-content:flex-end;
+	}
+	.align-bl-512 {
+		align-items:flex-end;
+		justify-content:flex-start;
+	}
+	.align-tr-512 {
+		align-items:flex-start;
+		justify-content:flex-end;
+	}
+	.align-cr-512 {
+		align-items:center;
+		justify-content:flex-end;
+	}
+	.align-cl-512 {
+		align-items:center;
+		justify-content:flex-start;
+	}
+	.align-c-512 {
+		align-items:center;
+		justify-content:center;
+	}
+}
+.responsive-iframe-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.responsive-iframe-container iframe,   
+.vresponsive-iframe-container object,  
+.vresponsive-iframe-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#__bs_notify__ {
+	opacity:.5;
+	top:auto!important;
+	bottom:0;
+}
+
+/* IMPORT
+=========================================*/
+@import 'nav';
+@import 'addon-text';
