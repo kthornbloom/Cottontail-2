@@ -92,7 +92,7 @@ module.exports = function(grunt) {
 		/* SYNCRONIZE BROWSERS & LIVE INJECT CSS / UPDATE FOR JS & HTML
 		=========================================*/
 		browserSync: {
-		    files: ["css/build/*.css", "js/build/*.js", "*.html"],
+		    files: ["Cottontail-2/js/build/*.js","Cottontail-2/css/build/*.css","css/build/*.css", "js/build/*.js", "*.html"],
 		    options: {
 				watchTask: true,
 		        server: './'

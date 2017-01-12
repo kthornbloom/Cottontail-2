@@ -1,43 +1,9 @@
 .element-text {
-	/* HEADINGS
-	=========================================*/
-	h1, h2, h3, h4, h5, h6 {
-		line-height: 1.2em;
-		margin:1em 0;
-	}
-	h1 {
-		font-size:2em;
-	}
-
-	h2 {
-		font-size:1.5em;
-	}
-
-	h3 {
-		font-size: 1.2em;
-	}
-
-	h4 {
-		font-weight: bold;
-	}
-
-	h5 {
-		font-size:.8em;
-		font-weight: bold;
-	}
-
-	h6 {
-		font-size:.65em;
-		font-weight: bold;
-	}
-
 	/* LINKS
 	=========================================*/
 	a:link, a:visited {
-		color:blue;
 	}
 	a:hover, a:active {
-		text-decoration: underline;
 	}
 	/* LISTS
 	=========================================*/
@@ -53,28 +19,6 @@
 	ol li {
 		list-style: decimal;
 	}
-
-	/* BLOCK QUOTES
-	=========================================*/
-	blockquote {
-		background: rgba(0,0,0,.1);
-		border-left:10px solid rgba(0,0,0,.1);
-		padding:1em 3em 1em 1em;
-		margin:10px 0;
-		font-size:1.2em;
-		position: relative;
-		&:after {
-			content:'”';
-			font-family: serif;
-			font-size:70px;
-			position: absolute;
-			bottom: 0;
-			right:0;
-			padding-right:10px;
-			color:rgba(0,0,0,.1);
-		}
-	}
-
 	/* TABLES
 	=========================================*/
 	table {
@@ -123,39 +67,5 @@
 		content: attr(data-title) "\00A0";
 			font-weight: bold;
 	}
-	/* TABLES
-	=========================================*/
-	.rwd-embed {
-		position: relative;
-		padding-bottom: 56.25%;
-		padding-top: 35px;
-		height: 0;
-		overflow: hidden;
-	}
-	.rwd-embed iframe {
-		position: absolute;
-		top:0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
 	
-.responsive-iframe-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
-}
-
-.responsive-iframe-container iframe,   
-.vresponsive-iframe-container object,  
-.vresponsive-iframe-container embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
 }

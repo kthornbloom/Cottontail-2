@@ -14,6 +14,28 @@
 	<link rel="stylesheet" href="Cottontail-2/css/build/stylesheet.min.css">
 </head>
 <body>
+<strike>Accordion</strike><br>
+Calendar<br>
+Carousel<br>
+<strike>Code</strike><br>
+<strike>Doc List</strike><br>
+Featured Text<br>
+Forms<br>
+<strike>Gallery (photo)</strike><br>
+<strike>HR</strike><br>
+<strike>Hero</strike><b> RWD TEXT?</b><br>
+<strike>Full Width Hero</strike> <b>Works with sidebar?</b><br> 
+Products?<br>
+Review Submitter<br>
+<strike>Reviews</strike><br>
+Slides<br>
+Spacer<br>
+<strike>Staff</strike><br>
+<strike>Video</strike><br>
+<strike>Video Gallery</strike><br>
+Alignment tools?
+<br>
+
 <nav class="centering" id="nav-desktop">
 	<ul>
 		<li><a href="#">Normal</a></li>
@@ -36,57 +58,45 @@
 	</ul>
 </nav>
 
-<strike>Accordion</strike><br>
-Calendar<br>
-Carousel<br>
-<strike>Code</strike><br>
-<strike>Doc List</strike><br>
-Featured Text<br>
-Forms<br>
-<strike>Gallery (photo)</strike><br>
-<strike>HR</strike><br>
-Photo (Full Width)<br>
-Quote<br>
-Review Submitter<br>
-Reviews<br>
-Slides<br>
-Spacer<br>
-Staff<br>
-Video<br>
-Video Gallery<br>
-<br>
-
 <div class="grid grid-pad centering">
+
+	<div class="col-12 element-hero-full" style="background-image:url('images/3.jpg')">
+		<div class="hero-text">
+			Full Width Hero Element
+		</div>
+	</div><!-- end .element-hero-full -->
+
 	<div class="col-12 element-accordion">
-		<h2>Accordion</h2>
 		<div class="accordion-topic">Accordion Topic</div>
 		<div class="accordion-result">Accordion Result</div>
 		<div class="accordion-topic">Accordion Topic</div>
 		<div class="accordion-result">Accordion Result</div>
-	</div>
+	</div><!-- end .element-accordion -->
+
 	<div class="col-12 element-calendar">
 		<h2>Calendar</h2>
-	</div>
+	</div><!-- end .element-calendar -->
+
 	<div class="col-12 element-carousel">
 		<h2>Carousel</h2>
-	</div>
+	</div><!-- end .element-carousel -->
+
 	<div class="col-12 element-code">
-		<h2>Code</h2>
 		<pre><code>
-		your();
-		code = "here";
+This is where you can put
+$(coded).things(and > "stuff");
 		</code></pre>
-	</div>
+	</div><!-- end .element-code -->
+
 	<div class="col-12 element-document-list">
-		<h2>Document List</h2>
 		<div class="document-list-header grid grid-pad">
 			<div class="col-6 document-list-title">
-				Title goes here
+				Document List
 			</div>
 			<div class="col-6 document-list-search-wrap">
 				<input type="text" placeholder="Search Documents" class="document-list-search">
 			</div>
-		</div>
+		</div><!-- end .document-list-header -->
 		<div class="document-list">
 			<a href="#"><b>Document Name John</b> <i>(37kb)</i></a>
 			<a href="#"><b>Document Name Bob</b> <i>(37kb)</i></a>
@@ -96,14 +106,49 @@ Video Gallery<br>
 			<a href="#"><b>Document Name John</b> <i>(37kb)</i></a>
 			<a href="#"><b>Document Name Bobby</b> <i>(37kb)</i></a>
 			<a href="#"><b>Document Name Ted</b> <i>(37kb)</i></a>
-		</div>
-	</div>
+		</div><!-- end .document-list -->
+	</div><!-- end .element-document-list -->
+
 	<div class="col-12 element-form">
-		<h2>Form</h2>
-	</div>
+		<form action="">
+		<fieldset>
+			<legend>Legend</legend>
+
+			<label>Text Input</label>
+			<input type="text" value="Some text">
+			<label>Required Text Input</label>
+			<input type="text" placeholder="placeholder" required>
+			<label>Textarea</label>
+			<textarea></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>Legend 2</legend>
+			<label>Select Menu</label>
+			<select>
+				<option value="Option 1">Option 1</option>
+				<option value="Option 2">Option 2</option>
+				<option value="Option 3">Option 3</option>
+				<option value="Option 4">Option 4</option>
+			</select>
+
+			<label>Radio Group</label>
+			<input required type="radio" name="group1" id="r1" value="1" /><label for="r1"> Yes</label>
+			<input required type="radio" name="group1" id="r2" value="1" /><label for="r2"> No</label>
+
+			<label>Checkbox Group</label>
+			<input type="checkbox" name="group2" id="c1" value="1" /><label for="c1"> Yes</label>
+			<input type="checkbox" name="group2" id="c2" value="1" /><label for="c2"> No</label>
+
+			<label>Range</label>
+			<input type=range min=0 max=15 step=3>
+			<input type=submit>
+		</fieldset>
+		</form>
+
+	</div><!-- end .element-form -->
+
 	<div class="col-12 element-photo-gallery">
-		<h2>Photo Gallery</h2>
-		<div class="grid" data-grid-min="200">
+		<div class="grid grid-pad" data-grid-min="200">
 			<div class="col-3">
 				<a href="images/1.jpg" data-image-zoom="group1" class="photo-gallery-image" style="background-image:url(images/1.jpg)">
 				</a>
@@ -129,10 +174,128 @@ Video Gallery<br>
 				</a>
 				<div class="photo-gallery-caption">Photo Caption</div>
 			</div>
+			<div class="col-3">
+				<a href="images/1.jpg" data-image-zoom="group2" class="photo-gallery-image" style="background-image:url(images/1.jpg)">
+				</a>
+				<div class="photo-gallery-caption">Photo Caption</div>
+			</div>
+		</div>
+	</div><!-- end .element-photo-gallery -->
+
+	<div class="col-12 element-hero" style="background-image:url('images/2.jpg')">
+		<div class="hero-text">
+			Hero Element
+		</div>
+	</div><!-- end .element-hero-->
+
+	<div class="col-12 element-reviews">
+		<div class="grid-720 grid-pad">
+			<div class="col-4">
+				<div class="card">
+				<div class="star-rating">
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-empty" data-glyph="star"></i>
+				</div>
+				<h2>Review Title</h2>
+				This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet.
+				</div><!-- end .review-->
+			</div><!-- end .col-4-->
+			<div class="col-4">
+				<div class="card">
+				<div class="star-rating">
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-empty" data-glyph="star"></i>
+				</div>
+				<h2>Review Title</h2>
+				This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet.
+				</div><!-- end .review-->
+			</div><!-- end .col-4-->
+			<div class="col-4">
+				<div class="card">
+				<div class="star-rating">
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-full" data-glyph="star"></i>
+					<i class="oi review-star-empty" data-glyph="star"></i>
+				</div>
+				<h2>Review Title</h2>
+				This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet.
+				</div><!-- end .review-->
+			</div><!-- end .col-4-->
+		</div><!-- end .grid -->
+	</div><!-- end .reviews -->
+	
+	<div class="col-12 element-staff">
+		<div class="grid grid-pad" data-grid-min="200">
+			<div class="col-3">
+				<a href="#" class="card">
+					<div class="staff-img" style="background-image:url(images/1.jpg)"></div>
+					<h2>John Dude</h2>
+					CEO, FBI, ABC
+				</a><!-- end .card-->
+			</div><!-- end .col-3-->
+			<div class="col-3">
+				<a href="#" class="card">
+					<div class="staff-img" style="background-image:url(images/1.jpg)"></div>
+					<h2>John Dude</h2>
+					CEO, FBI, ABC
+				</a><!-- end .card-->
+			</div><!-- end .col-3-->
+			<div class="col-3">
+				<a href="#" class="card">
+					<div class="staff-img" style="background-image:url(images/1.jpg)"></div>
+					<h2>John Dude</h2>
+					CEO, FBI, ABC
+				</a><!-- end .card-->
+			</div><!-- end .col-3-->
+			<div class="col-3">
+				<a href="#" class="card">
+					<div class="staff-img" style="background-image:url(images/1.jpg)"></div>
+					<h2>John Dude</h2>
+					CEO, FBI, ABC
+				</a><!-- end .card-->
+			</div><!-- end .col-3-->
+		</div><!-- end .grid-->
+	</div><!-- end .element-staff -->
+
+	<div class="col-12 element-video">
+		<div class="rwd-embed">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/dMcQidZdaOk" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div><!-- end .element-video -->
+
+	<div class="col-12 element-video-gallery">
+		<div class="grid grid-pad" data-grid-min="300">
+			<div class="col-4">
+				<div class="rwd-embed">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dMcQidZdaOk" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div><!-- end .col-4 -->
+			<div class="col-4">
+				<div class="rwd-embed">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dMcQidZdaOk" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div><!-- end .col-4 -->
+			<div class="col-4">
+				<div class="rwd-embed">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dMcQidZdaOk" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div><!-- end .col-4 -->
+			<div class="col-4">
+				<div class="rwd-embed">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dMcQidZdaOk" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div><!-- end .col-4 -->
 		</div>
 	</div>
-	<div class="col-12 element-hr">
-	</div>
+
 	<div class="col-12 element-text">
 		<h1>Heading One</h1>
 		This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet. You'll be able to manage this text, format it with various styles, and place other elements within this space. Once again, this is simply 'filler' and is only being used to show what this layout looks like with content before we actually have it. <strong>Bold</strong>, <em>underline</em>, <i>italic</i>, <strike>strike</strike>, <a href="#">link</a> 12<sup>th</sup>, H<sub>2</sub>O<sub>2</sub>.
@@ -150,7 +313,7 @@ Video Gallery<br>
 		This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet. You'll be able to manage this text, format it with various styles, and place other elements within this space.
 	<!--
 		<div class="rwd-embed">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/ZjM-vaHJv_Y" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/dMcQidZdaOk" frameborder="0" allowfullscreen></iframe>
 		</div>
 	-->
 		<blockquote>Wow, a very important quotetext. It will get replaced with your actual content later on. We use this sample!</blockquote>

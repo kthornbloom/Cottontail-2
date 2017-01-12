@@ -10,6 +10,7 @@ $transition-long:.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 $transition-short:.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 $padding:15px;
 $maxwidth: 1000px;
+$br:3px;
 
 /* GLOBAL STUFF
 =========================================*/
@@ -19,13 +20,6 @@ $maxwidth: 1000px;
 }
 
 [class*='element-'] {
-	h2 {
-		font-size:2em;
-		line-height: 1.2em;
-		text-align: center;
-		background: #222;
-		color:#fff;
-	}
 }
 /* GRID SYSTEM
 =========================================*/
@@ -42,8 +36,8 @@ $maxwidth: 1000px;
 [class*='col-'] {
 }
 .grid-pad {
-	[class*='col-'] {
-		padding:$padding
+	> [class*='col-'] {
+		padding:$padding;
 	}
 }
 .col-1 {width:8.33%}
@@ -109,9 +103,79 @@ $maxwidth: 1000px;
 @import 'element-accordion';
 @import 'element-code';
 @import 'element-document-list';
+@import 'element-form';
 @import 'element-text';
 @import 'element-photo-gallery';
-@import 'element-hr';
+@import 'element-hero';
+@import 'element-reviews';
+@import 'element-staff';
+@import 'element-video-gallery';
+
+/* GENERAL CONTENT
+=========================================*/
+.card {
+	display: block;
+	background: #eee;
+	padding:calc(#{$padding} * 2);
+	border-radius:3px;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2em;
+	margin:1em 0;
+}
+h1 {
+	font-size:2em;
+}
+
+h2 {
+	font-size:1.5em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+h5 {
+	font-size:.8em;
+	font-weight: bold;
+}
+
+h6 {
+	font-size:.65em;
+	font-weight: bold;
+}
+
+blockquote {
+	background: rgba(0,0,0,.1);
+	padding:$padding;
+	margin:$padding 0;
+	font-size:1.3em;
+}
+
+/* EMBEDS
+=========================================*/
+.rwd-embed {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 35px;
+	height: 0;
+	overflow: hidden;
+}
+.rwd-embed iframe,
+.rwd-embed object,
+.rwd-embed embed {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
 
 /* MISC
 =========================================*/

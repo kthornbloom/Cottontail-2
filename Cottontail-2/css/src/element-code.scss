@@ -1,9 +1,10 @@
 .element-code {
 	pre {
 		background:repeating-linear-gradient(to bottom, #000 0, #000 1.5rem, #222 1.5rem, #222 3rem );
-		padding:0;
+		padding:0 $padding;
 		margin:0;
 		line-height:1.5rem;
+		border-radius:$br;
 	}
 	code {
 		color:#fff;

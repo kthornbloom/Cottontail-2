@@ -1,0 +1,121 @@
+.element-form {
+	line-height: 1.5em;
+	fieldset {
+		background:#F3F3F3;
+		padding: 3em $padding $padding $padding;
+		margin-top:$padding;
+		position: relative;
+		border:$br;
+	}
+	legend {
+		font-weight: bold;
+		font-size:1.2em;
+		position: absolute;
+		top:$padding;
+	}
+	label {
+		display: block;
+		font-size:.85em;
+		font-weight: bold;
+	}
+	textarea, input:not([type=submit]):not([type=radio]):not([type=checkbox]) {
+		padding:1em;
+		margin-bottom:1em;
+		border:0;
+		background:#fff;
+		font-size:1rem;
+		width:100%;
+		max-width: 400px;
+		color:#555;
+		border:1px solid #ccc;
+		border-radius:$br;
+		transition:$transition-short;
+	}
+	textarea:hover, input:not([type=submit]):not([type=radio]):not([type=checkbox]):hover {
+		color:#000;
+	}
+	textarea:focus, input:not([type=submit]):not([type=radio]):not([type=checkbox]):focus {
+		border:1px solid #222;
+		color:#000;
+		outline: none;
+	}
+
+	textarea:required, input:not([type=submit]):not([type=radio]):not([type=checkbox]):required {
+		border:1px solid #e37070;
+		box-shadow:inset 5px 0 0 0 #e37070;
+	}
+
+	textarea:required:valid, input:not([type=submit]):not([type=radio]):not([type=checkbox]):required:valid {
+		border:1px solid #31EB82;
+		box-shadow:inset 5px 0 0 0 #31EB82;
+	}
+
+	/* RADIO BUTTONS
+	=========================================*/
+	input[type="radio"], input[type="checkbox"] {
+		display: none;
+	}
+
+	input[type="radio"] + label:before {
+		content:'';
+		display:inline-block;
+		width:.75em;
+		height:.75em;
+		background:none;
+		box-shadow:0 0 0 3px #F3F3F3, 0 0 0 4px #555;
+		border-radius:50%;
+		margin:0 .5em 0 0;
+		vertical-align: middle;
+		text-align: center;
+		cursor:pointer;
+		transition:$transition-short;
+	}
+
+	input[type="radio"]:checked + label {
+		color:#222;
+	}
+
+	input[type="radio"]:checked + label:before {
+		background:#555;
+	}
+
+	/* CHECKBOXES
+	=========================================*/
+	input[type="checkbox"] + label:before {
+		content:'';
+		display:inline-block;
+		width:.75em;
+		height:.75em;
+		background:none;
+		box-shadow:0 0 0 3px #F3F3F3, 0 0 0 4px #555;
+		margin:0 .5em 0 0;
+		vertical-align: middle;
+		text-align: center;
+		cursor:pointer;
+		transition:$transition-short;
+	}
+
+	input[type="checkbox"]:checked + label {
+		color:#222;
+	}
+
+	input[type="checkbox"]:checked + label:before {
+		background:#555;
+	}
+
+	input[type="submit"]{
+		display: block;
+		width:100%;
+		max-width: 400px;
+		text-align: center;
+		outline: none;
+		border:0;
+		background: #222;
+		color:#fff;
+		font-size: 1rem;
+		padding:$padding;
+		border-radius:$br;
+		cursor: pointer;
+	}
+
+}

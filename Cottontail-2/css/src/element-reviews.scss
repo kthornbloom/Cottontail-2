@@ -1,0 +1,27 @@
+.element-reviews {
+	padding:$padding 0!important;
+}
+.review {
+	background: #eee;
+	padding:$padding;
+	border-radius:$br;
+}
+
+.star-rating {
+	display: block;
+	text-align: center;
+	background: #222;
+	color:#fff;
+	margin:calc(#{$padding} * -2);
+	margin-bottom: 0;
+	padding:$padding;
+	border-radius:$br $br 0 0;
+}
+
+.review-star-full {
+
+}
+
+.review-star-empty {
+	opacity: .3;
+}

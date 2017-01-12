@@ -14,7 +14,7 @@ $('a[data-image-zoom]').click(function(event) {
 
 	/* ADD MODAL
 	=========================================*/
-	$('body').append("<div class='image-zoom-overlay'><div style='background-image:url("+largeImg+");'><a href='#' id='regress-image-zoom'></a><a href='#' id='advance-image-zoom'></a></div><a href='#' id='close-image-zoom'></a></div>");
+	$('body').append("<div class='image-zoom-overlay'><div class='image-zoom' style='background-image:url("+largeImg+");'></div><div class='image-zoom-controls'><a href='#' id='regress-image-zoom'><i class='oi' data-glyph='arrow-thick-left'></i></a><a href='#' id='image-zoom-size-toggle'></a><a href='#' id='close-image-zoom'><i class='oi' data-glyph='circle-x'></i></a><a href='#' id='advance-image-zoom'><i class='oi' data-glyph='arrow-thick-right'></i></a></div>");
 	$('.image-zoom-overlay').offset();
 	$('.image-zoom-overlay').addClass('image-zoom-visible');
 
@@ -22,7 +22,9 @@ $('a[data-image-zoom]').click(function(event) {
 	=========================================*/
 	var groupTotal = $('a[data-image-zoom=' + groupName + ']').length;
 	if (groupTotal > 1){
-		$(".image-zoom-overlay div").draggable();
+		$(".image-zoom").draggable();
+	} else {
+		$('#regress-image-zoom, #advance-image-zoom').remove();
 	}
 });
 
@@ -51,21 +53,25 @@ function advanceImageZoom(){
 		nextIndex = currentIndex + 1;
 	/* At End */
 	if (nextIndex >= groupTotal) {
-		$('.image-zoom-overlay div').animate({
-			left: 0
-		}, 150);
+		$('.image-zoom').animate({
+			left: '-10%'
+		}, 150, function(){
+			$('.image-zoom').animate({
+				left: '0%'
+			}, 150);
+		});
 	} else {
 		$('#image-zoom-active').attr('id','');
-		$('.image-zoom-overlay div').css('opacity','0');
+		$('.image-zoom').css('opacity','0');
 		setTimeout(function(){
-			$('.image-zoom-overlay div').remove();
+			$('.image-zoom').remove();
 			$("[data-image-zoom=" + groupName + "]:eq(" + nextIndex + ")").attr('id', 'image-zoom-active');
 			var nextImg = $("#image-zoom-active").attr('href');
-			$('.image-zoom-overlay').prepend("<div style='background-image:url("+nextImg+");left:100%;'><a href='#' id='regress-image-zoom'></a><a href='#' id='advance-image-zoom'></a></div>");
-			$('.image-zoom-overlay div').animate({
+			$('.image-zoom-overlay').prepend("<div class='image-zoom' style='background-image:url("+nextImg+");left:100%;'></div>");
+			$('.image-zoom').animate({
 				left: 0
 			}, 150);
-			$(".image-zoom-overlay div").draggable();
+			$(".image-zoom").draggable();
 		}, 250);
 	}
 }
@@ -74,6 +80,13 @@ $(document.body).on('click', '#advance-image-zoom', function(event) {
 	event.preventDefault();
 	advanceImageZoom();
 });
+
+
+$(document.body).on('click', '#image-zoom-size-toggle', function(event) {
+	event.preventDefault();
+	$('.image-zoom-overlay').toggleClass('contain');
+});
+
 
 /* PREV IMAGE
 =========================================*/
@@ -84,21 +97,25 @@ function regressImageZoom(){
 		nextIndex = currentIndex - 1;
 	/* At End */
 	if (nextIndex <= -1) {
-		$('.image-zoom-overlay div').animate({
-			left: 0
-		}, 150);
+		$('.image-zoom').animate({
+			left: '10%'
+		}, 150, function(){
+			$('.image-zoom').animate({
+				left: '0%'
+			}, 150);
+		});
 	} else {
 		$('#image-zoom-active').attr('id','');
-		$('.image-zoom-overlay div').css('opacity','0');
+		$('.image-zoom').css('opacity','0');
 		setTimeout(function(){
-			$('.image-zoom-overlay div').remove();
+			$('.image-zoom').remove();
 			$("[data-image-zoom=" + groupName + "]:eq(" + nextIndex + ")").attr('id', 'image-zoom-active');
 			var nextImg = $("#image-zoom-active").attr('href');
-			$('.image-zoom-overlay').prepend("<div style='background-image:url("+nextImg+");left:-100%;'><a href='#' id='regress-image-zoom'></a><a href='#' id='advance-image-zoom'></a></div>");
-			$('.image-zoom-overlay div').animate({
+			$('.image-zoom-overlay').prepend("<div class='image-zoom' style='background-image:url("+nextImg+");left:-100%;'></div>");
+			$('.image-zoom').animate({
 				left: 0
 			}, 150);
-			$(".image-zoom-overlay div").draggable();
+			$(".image-zoom").draggable();
 		}, 250);
 	}
 }

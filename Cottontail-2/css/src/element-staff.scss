@@ -1,0 +1,20 @@
+.staff-img {
+	margin:calc(#{$padding} * -2);
+    margin-bottom: 0;
+    padding-top: 130%;
+    background-size: cover;
+    background-position: center;
+    border-radius:$br $br 0 0;
+}
+
+.element-staff {
+	padding:$padding 0!important;
+	.card {
+		transition:$transition-short;
+	}
+	.card:hover {
+		transform:translateY(-5px);
+		background: #fff;
+		box-shadow:0 10px 10px rgba(0,0,0,.1);
+	}
+}
