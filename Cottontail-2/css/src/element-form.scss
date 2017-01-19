@@ -17,10 +17,10 @@
 		display: block;
 		font-size:.85em;
 		font-weight: bold;
+		margin-top:1em;
 	}
 	textarea, input:not([type=submit]):not([type=radio]):not([type=checkbox]) {
 		padding:1em;
-		margin-bottom:1em;
 		border:0;
 		background:#fff;
 		font-size:1rem;
@@ -64,15 +64,21 @@
 		background:none;
 		box-shadow:0 0 0 3px #F3F3F3, 0 0 0 4px #555;
 		border-radius:50%;
-		margin:0 .5em 0 0;
+		margin:0 .5em 0 .3em;
 		vertical-align: middle;
 		text-align: center;
 		cursor:pointer;
-		transition:$transition-short;
+		transition:$transition-long;
+	}
+
+	input[type="radio"] + label{
+		color:#555;
+		margin-top:.5em;
+		cursor: pointer;
 	}
 
 	input[type="radio"]:checked + label {
-		color:#222;
+		color:#000;
 	}
 
 	input[type="radio"]:checked + label:before {
@@ -88,15 +94,21 @@
 		height:.75em;
 		background:none;
 		box-shadow:0 0 0 3px #F3F3F3, 0 0 0 4px #555;
-		margin:0 .5em 0 0;
+		margin:0 .5em 0 .3em;
 		vertical-align: middle;
 		text-align: center;
 		cursor:pointer;
 		transition:$transition-short;
 	}
 
+	input[type="checkbox"] + label{
+		color:#555;
+		margin-top:.5em;
+		cursor: pointer;
+	}
+
 	input[type="checkbox"]:checked + label {
-		color:#222;
+		color:#000;
 	}
 
 	input[type="checkbox"]:checked + label:before {
@@ -106,15 +118,19 @@
 	input[type="submit"]{
 		display: block;
 		width:100%;
-		max-width: 400px;
 		text-align: center;
 		outline: none;
 		border:0;
-		background: #222;
+		margin-top:1em;
+		background: #555;
 		color:#fff;
 		font-size: 1rem;
 		padding:$padding;
 		border-radius:$br;
+	}
+
+	input[type="submit"]:hover {
+		background: #000;
 		cursor: pointer;
 	}
 

@@ -2,9 +2,7 @@
 	padding:$padding 0!important;
 }
 .review {
-	background: #eee;
-	padding:$padding;
-	border-radius:$br;
+	@extend .text-formatting;
 }
 
 .star-rating {

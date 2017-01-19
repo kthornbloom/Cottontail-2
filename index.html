@@ -15,11 +15,11 @@
 </head>
 <body>
 <strike>Accordion</strike><br>
-Calendar<br>
-Carousel<br>
+<strike>Calendar</strike><br>
+<strike>Carousel</strike> <b>Hide imgs while loading?</b><br>
 <strike>Code</strike><br>
 <strike>Doc List</strike><br>
-Featured Text<br>
+<strike>Featured Text</strike><br>
 Forms<br>
 <strike>Gallery (photo)</strike><br>
 <strike>HR</strike><br>
@@ -33,7 +33,7 @@ Spacer<br>
 <strike>Staff</strike><br>
 <strike>Video</strike><br>
 <strike>Video Gallery</strike><br>
-Alignment tools?
+<strike>Alignment tools?</strike>
 <br>
 
 <nav class="centering" id="nav-desktop">
@@ -70,15 +70,30 @@ Alignment tools?
 		<div class="accordion-topic">Accordion Topic</div>
 		<div class="accordion-result">Accordion Result</div>
 		<div class="accordion-topic">Accordion Topic</div>
-		<div class="accordion-result">Accordion Result</div>
+		<div class="accordion-result">Accordion 
+		<ul>
+			<li>wf</li>
+			<li>sfgasdf</li>
+		</ul>
+		<a href="#">soiduf</a>
+
+		</div>
 	</div><!-- end .element-accordion -->
 
 	<div class="col-12 element-calendar">
 		<h2>Calendar</h2>
+		<div class="monthly" id="calendar"></div>
 	</div><!-- end .element-calendar -->
 
 	<div class="col-12 element-carousel">
 		<h2>Carousel</h2>
+		<ul class="carousel">
+			<li><img src="images/1.jpg" /></li>
+			<li><img src="images/2.jpg" /></li>
+			<li><img src="images/3.jpg" /></li>
+			<li><img src="images/4.jpg" /></li>
+			<li><img src="images/1.jpg" /></li>
+		</ul>
 	</div><!-- end .element-carousel -->
 
 	<div class="col-12 element-code">
@@ -90,10 +105,10 @@ $(coded).things(and > "stuff");
 
 	<div class="col-12 element-document-list">
 		<div class="document-list-header grid grid-pad">
-			<div class="col-6 document-list-title">
+			<div class="col-6 document-list-title align-cl">
 				Document List
 			</div>
-			<div class="col-6 document-list-search-wrap">
+			<div class="col-6 document-list-search-wrap align-cr">
 				<input type="text" placeholder="Search Documents" class="document-list-search">
 			</div>
 		</div><!-- end .document-list-header -->
@@ -110,8 +125,8 @@ $(coded).things(and > "stuff");
 	</div><!-- end .element-document-list -->
 
 	<div class="col-12 element-form">
-		<form action="">
-		<fieldset>
+		<form action="" class="grid-720">
+		<fieldset class="col-6">
 			<legend>Legend</legend>
 
 			<label>Text Input</label>
@@ -121,7 +136,7 @@ $(coded).things(and > "stuff");
 			<label>Textarea</label>
 			<textarea></textarea>
 		</fieldset>
-		<fieldset>
+		<fieldset class="col-6">
 			<legend>Legend 2</legend>
 			<label>Select Menu</label>
 			<select>
@@ -138,14 +153,18 @@ $(coded).things(and > "stuff");
 			<label>Checkbox Group</label>
 			<input type="checkbox" name="group2" id="c1" value="1" /><label for="c1"> Yes</label>
 			<input type="checkbox" name="group2" id="c2" value="1" /><label for="c2"> No</label>
-
-			<label>Range</label>
-			<input type=range min=0 max=15 step=3>
-			<input type=submit>
+			
+			<input type="submit" value="Go">
 		</fieldset>
 		</form>
 
 	</div><!-- end .element-form -->
+
+	<div class="col-12 element-featured-text">
+		<div class="text">
+			Here is some nifty text. It's <i>featured</i>. Must be important!
+		</div>
+	</div><!-- end .element-code -->
 
 	<div class="col-12 element-photo-gallery">
 		<div class="grid grid-pad" data-grid-min="200">
@@ -191,7 +210,7 @@ $(coded).things(and > "stuff");
 	<div class="col-12 element-reviews">
 		<div class="grid-720 grid-pad">
 			<div class="col-4">
-				<div class="card">
+				<div class="card review">
 				<div class="star-rating">
 					<i class="oi review-star-full" data-glyph="star"></i>
 					<i class="oi review-star-full" data-glyph="star"></i>
@@ -204,7 +223,7 @@ $(coded).things(and > "stuff");
 				</div><!-- end .review-->
 			</div><!-- end .col-4-->
 			<div class="col-4">
-				<div class="card">
+				<div class="card review">
 				<div class="star-rating">
 					<i class="oi review-star-full" data-glyph="star"></i>
 					<i class="oi review-star-full" data-glyph="star"></i>
@@ -217,7 +236,7 @@ $(coded).things(and > "stuff");
 				</div><!-- end .review-->
 			</div><!-- end .col-4-->
 			<div class="col-4">
-				<div class="card">
+				<div class="card review">
 				<div class="star-rating">
 					<i class="oi review-star-full" data-glyph="star"></i>
 					<i class="oi review-star-full" data-glyph="star"></i>
@@ -355,7 +374,15 @@ $(coded).things(and > "stuff");
 
 <script type="text/javascript">
 	$(window).on('load', function() {
-		//
+		 $('#calendar').monthly();
+		 $('.carousel').bxSlider({
+			slideWidth: 200,
+			minSlides: 4,
+			maxSlides: 6,
+			slideMargin: 10,
+			moveSlides: 1,
+			auto: true
+		});
 	});
 </script>
 </body>

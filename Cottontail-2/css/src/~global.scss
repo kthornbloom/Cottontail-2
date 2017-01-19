@@ -96,15 +96,65 @@ $br:3px;
 	}
 }
 
+/* ALIGNMENT
+=========================================*/
+div[class*='align-tr'] {
+	display: flex;
+	align-items:flex-start;
+	justify-content:flex-end;
+}
+div[class*='align-br'] {
+	display: flex;
+	align-items:flex-end;
+	justify-content:flex-end;
+}
+div[class*='align-bl'] {
+	display: flex;
+	align-items:flex-end;
+	justify-content:flex-start;
+}
+div[class*='align-c'] {
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+div[class*='align-cl'] {
+	display: flex;
+	align-items:center;
+	justify-content:flex-start;
+}
+div[class*='align-cr'] {
+	display: flex;
+	align-items:center;
+	justify-content:flex-end;
+}
+@media screen and (max-width: 960px) {
+	.align-tr-960, .align-br-960, .align-bl-960, .align-c-960, .align-cr-960, .align-cl-960 {
+		display: block!important;
+	}
+}
+@media screen and (max-width: 720px) {
+	.align-tr-720, .align-br-720, .align-bl-720, .align-c-720, .align-cr-720, .align-cl-720 {
+		display: block!important;
+	}
+}
+@media screen and (max-width: 512px) {
+	.align-tr-512, .align-br-512, .align-bl-512, .align-c-512, .align-cr-512, .align-cl-512 {
+		display: block!important;
+	}
+}
 /* IMPORT
 =========================================*/
 @import 'open-iconic';
 @import 'nav';
+@import 'element-text';
 @import 'element-accordion';
 @import 'element-code';
+@import 'bxslider';
+@import 'monthly';
 @import 'element-document-list';
 @import 'element-form';
-@import 'element-text';
+@import 'element-featured-text';
 @import 'element-photo-gallery';
 @import 'element-hero';
 @import 'element-reviews';
@@ -118,42 +168,6 @@ $br:3px;
 	background: #eee;
 	padding:calc(#{$padding} * 2);
 	border-radius:3px;
-}
-h1, h2, h3, h4, h5, h6 {
-	line-height: 1.2em;
-	margin:1em 0;
-}
-h1 {
-	font-size:2em;
-}
-
-h2 {
-	font-size:1.5em;
-}
-
-h3 {
-	font-size: 1.2em;
-}
-
-h4 {
-	font-weight: bold;
-}
-
-h5 {
-	font-size:.8em;
-	font-weight: bold;
-}
-
-h6 {
-	font-size:.65em;
-	font-weight: bold;
-}
-
-blockquote {
-	background: rgba(0,0,0,.1);
-	padding:$padding;
-	margin:$padding 0;
-	font-size:1.3em;
 }
 
 /* EMBEDS
@@ -180,7 +194,14 @@ blockquote {
 /* MISC
 =========================================*/
 #__bs_notify__ {
-	opacity:.5;
-	top:auto!important;
-	bottom:0;
+	opacity:.7;
+	position: fixed!important;
+	left:50%!important;
+	top:50%!important;
+	transform:translateX(-50%) translateY(-50%);
+	pointer-events:none;
+	background:#fff!important;
+	color:#222!important;
+	border-radius:30px!important;
+	font-weight: bold;
 }
