@@ -3,6 +3,7 @@
 	background:rgba(0,0,0,.1);
 	margin-bottom: 1px;
 	cursor: pointer;
+	transition:$transition-short;
 	&:before {
 		content: '+';
 		font-weight: 700;
@@ -10,7 +11,6 @@
 		width: 1em;
 		height: 1em;
 		font-size: 1.2em;
-		background: #fff;
 		color: #555;
 		border-radius: 50%;
 		text-align: center;
@@ -19,11 +19,15 @@
 		transition:$transition-short;
 	}
 }
-.accordion-topic:hover,
-.accordion-open {
+.accordion-topic:hover {
 	background:rgba(0,0,0,.15);
+}
+.accordion-open,
+.accordion-open:hover {
+	background:$highlight;
+	color:#fff;
 	&:before {
-		color:#222;
+		color:#fff;
 	}
 }
 .accordion-open:before {

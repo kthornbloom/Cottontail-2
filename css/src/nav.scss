@@ -17,7 +17,7 @@
 		}
 	}
 	>ul>li:hover {
-		background: #222;
+		background: $highlight;
 		>a:link, >a:visited {
 			color:#fff;
 		}
@@ -45,7 +45,7 @@
 			padding:1em;
 		}
 		a:hover {
-			background: #222;
+			background: $highlight;
 			color:#fff;
 		}
 	}

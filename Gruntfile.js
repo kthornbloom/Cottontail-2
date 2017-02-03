@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
@@ -8,9 +9,9 @@ module.exports = function(grunt) {
 		concat: {
 			dist: {
 				src: [
-					'Cottontail-2/js/src/*.js'
+					'js/src/*.js'
 				],
-				dest: 'Cottontail-2/js/build/production.js'
+				dest: 'js/build/production.js'
 			}
 		},
 
@@ -18,8 +19,8 @@ module.exports = function(grunt) {
 		=========================================*/
 		uglify: {
 			build: {
-				src: 'Cottontail-2/js/build/production.js',
-				dest: 'Cottontail-2/js/build/production.min.js'
+				src: 'js/build/production.js',
+				dest: 'js/build/production.min.js'
 			}
 		},
 
@@ -28,7 +29,7 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					'Cottontail-2/css/build/stylesheet.css': 'Cottontail-2/css/src/~global.scss'
+					'css/build/stylesheet.css': 'css/src/~global.scss'
 				}
 			}
 		},
@@ -37,7 +38,7 @@ module.exports = function(grunt) {
 		=========================================*/
 		autoprefixer: {
             dist: {
-                src: 'Cottontail-2/css/build/stylesheet.css'
+                src: 'css/build/stylesheet.css'
             }
         },
 
@@ -47,9 +48,9 @@ module.exports = function(grunt) {
 			target: {
 				files: [{
 					expand: true,
-					cwd: 'Cottontail-2/css/build',
+					cwd: 'css/build',
 					src: ['*.css', '!*.min.css'],
-					dest: 'Cottontail-2/css/build',
+					dest: 'css/build',
 					ext: '.min.css'
 				}]
 			}
@@ -59,21 +60,21 @@ module.exports = function(grunt) {
 		=========================================*/
 		watch: {
 			scripts: {
-				files: ['Cottontail-2/js/*.js'],
+				files: ['js/*.js'],
 				tasks: ['concat', 'uglify'],
 				options: {
 					spawn: false
 				},
 			},
 			css: {
-				files: ['Cottontail-2/css/src/*.scss'],
+				files: ['css/src/*.scss'],
 				tasks: ['sass','autoprefixer','cssmin'],
 				options: {
 				  spawn: false
 				}
 			},
 			js: {
-				files: ['Cottontail-2/js/src/*.js'],
+				files: ['js/src/*.js'],
 				tasks: ['concat','uglify'],
 				options: {
 				  spawn: false
@@ -92,7 +93,7 @@ module.exports = function(grunt) {
 		/* SYNCRONIZE BROWSERS & LIVE INJECT CSS / UPDATE FOR JS & HTML
 		=========================================*/
 		browserSync: {
-		    files: ["Cottontail-2/js/build/*.js","Cottontail-2/css/build/*.css","css/build/*.css", "js/build/*.js", "*.html"],
+		    files: ["js/build/*.js","css/build/*.css","css/build/*.css", "js/build/*.js", "*.html"],
 		    options: {
 				watchTask: true,
 		        server: './'

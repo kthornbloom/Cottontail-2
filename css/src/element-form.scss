@@ -59,10 +59,10 @@
 	input[type="radio"] + label:before {
 		content:'';
 		display:inline-block;
-		width:.75em;
-		height:.75em;
+		width:1.25em;
+		height:1.25em;
 		background:none;
-		box-shadow:0 0 0 3px #F3F3F3, 0 0 0 4px #555;
+		border:1px solid #555;
 		border-radius:50%;
 		margin:0 .5em 0 .3em;
 		vertical-align: middle;
@@ -75,6 +75,12 @@
 		color:#555;
 		margin-top:.5em;
 		cursor: pointer;
+		border-radius:2px;
+		transition:$transition-short;
+	}
+
+	input[type="radio"] + label:hover{
+		background:rgba(0,0,0,.05);
 	}
 
 	input[type="radio"]:checked + label {
@@ -82,7 +88,8 @@
 	}
 
 	input[type="radio"]:checked + label:before {
-		background:#555;
+		box-shadow:inset 0 0 0 3px #F3F3F3;
+		background:$highlight;
 	}
 
 	/* CHECKBOXES
@@ -90,10 +97,11 @@
 	input[type="checkbox"] + label:before {
 		content:'';
 		display:inline-block;
-		width:.75em;
-		height:.75em;
+		width:1.25em;
+		height:1.25em;
 		background:none;
-		box-shadow:0 0 0 3px #F3F3F3, 0 0 0 4px #555;
+		border:1px solid #555;
+		border-radius:2px;
 		margin:0 .5em 0 .3em;
 		vertical-align: middle;
 		text-align: center;
@@ -105,6 +113,12 @@
 		color:#555;
 		margin-top:.5em;
 		cursor: pointer;
+		border-radius:2px;
+		transition:$transition-short;
+	}
+
+	input[type="checkbox"] + label:hover{
+		background:rgba(0,0,0,.05);
 	}
 
 	input[type="checkbox"]:checked + label {
@@ -112,7 +126,8 @@
 	}
 
 	input[type="checkbox"]:checked + label:before {
-		background:#555;
+		box-shadow:inset 0 0 0 2px #F3F3F3;
+		background:$highlight;
 	}
 
 	input[type="submit"]{
@@ -122,7 +137,7 @@
 		outline: none;
 		border:0;
 		margin-top:1em;
-		background: #555;
+		background: $highlight;
 		color:#fff;
 		font-size: 1rem;
 		padding:$padding;
@@ -130,7 +145,7 @@
 	}
 
 	input[type="submit"]:hover {
-		background: #000;
+		background: rgba($highlight, .9);
 		cursor: pointer;
 	}
 

@@ -2,7 +2,9 @@
 
 /* COLORS
 =========================================*/
-$example:#ccc;
+
+/* Keep bright enough on to see on white */
+$highlight:#A53012;
 
 /* OTHER VARIABLES
 =========================================*/
@@ -150,7 +152,7 @@ div[class*='align-cr'] {
 @import 'element-text';
 @import 'element-accordion';
 @import 'element-code';
-@import 'bxslider';
+@import 'element-carousel';
 @import 'monthly';
 @import 'element-document-list';
 @import 'element-form';

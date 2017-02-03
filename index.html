@@ -11,30 +11,18 @@
 	<link rel="icon" href="favicon.png">
 
 	<!-- CSS ====================================================== -->
-	<link rel="stylesheet" href="Cottontail-2/css/build/stylesheet.min.css">
+	<link rel="stylesheet" href="css/build/stylesheet.min.css">
 </head>
 <body>
-<strike>Accordion</strike><br>
-<strike>Calendar</strike><br>
-<strike>Carousel</strike> <b>Hide imgs while loading?</b><br>
-<strike>Code</strike><br>
-<strike>Doc List</strike><br>
-<strike>Featured Text</strike><br>
-Forms<br>
-<strike>Gallery (photo)</strike><br>
-<strike>HR</strike><br>
-<strike>Hero</strike><b> RWD TEXT?</b><br>
-<strike>Full Width Hero</strike> <b>Works with sidebar?</b><br> 
+<b>TO DO:</b><br>
+Slideshow<br>
+Carousel JS<br>
+Carousel Width<br>
+Mobile Nav<br>
+Hero RWD Text<br>
+Limit Full Width Hero to non-sidebar<br>
 Products?<br>
-Review Submitter<br>
-<strike>Reviews</strike><br>
-Slides<br>
-Spacer<br>
-<strike>Staff</strike><br>
-<strike>Video</strike><br>
-<strike>Video Gallery</strike><br>
-<strike>Alignment tools?</strike>
-<br>
+Form Columns<br>
 
 <nav class="centering" id="nav-desktop">
 	<ul>
@@ -90,8 +78,18 @@ Spacer<br>
 		<ul class="carousel">
 			<li><img src="images/1.jpg" /></li>
 			<li><img src="images/2.jpg" /></li>
+			<li><img src="images/odd-size.jpg" /></li>
 			<li><img src="images/3.jpg" /></li>
 			<li><img src="images/4.jpg" /></li>
+			<li><img src="images/1.jpg" /></li>
+		</ul>
+
+		<ul class="carousel">
+			<li><img src="images/4.jpg" /></li>
+			<li><img src="images/3.jpg" /></li>
+			<li><img src="images/2.jpg" /></li>
+			<li><img src="images/4.jpg" /></li>
+			<li><img src="images/odd-size.jpg" /></li>
 			<li><img src="images/1.jpg" /></li>
 		</ul>
 	</div><!-- end .element-carousel -->
@@ -133,6 +131,8 @@ $(coded).things(and > "stuff");
 			<input type="text" value="Some text">
 			<label>Required Text Input</label>
 			<input type="text" placeholder="placeholder" required>
+			<label>Date</label>
+			<input type="date">
 			<label>Textarea</label>
 			<textarea></textarea>
 		</fieldset>
@@ -256,28 +256,28 @@ $(coded).things(and > "stuff");
 			<div class="col-3">
 				<a href="#" class="card">
 					<div class="staff-img" style="background-image:url(images/1.jpg)"></div>
-					<h2>John Dude</h2>
+					<b>John Dude</b><br>
 					CEO, FBI, ABC
 				</a><!-- end .card-->
 			</div><!-- end .col-3-->
 			<div class="col-3">
 				<a href="#" class="card">
 					<div class="staff-img" style="background-image:url(images/1.jpg)"></div>
-					<h2>John Dude</h2>
+					<b>John Dude</b><br>
 					CEO, FBI, ABC
 				</a><!-- end .card-->
 			</div><!-- end .col-3-->
 			<div class="col-3">
 				<a href="#" class="card">
 					<div class="staff-img" style="background-image:url(images/1.jpg)"></div>
-					<h2>John Dude</h2>
+					<b>John Dude</b><br>
 					CEO, FBI, ABC
 				</a><!-- end .card-->
 			</div><!-- end .col-3-->
 			<div class="col-3">
 				<a href="#" class="card">
 					<div class="staff-img" style="background-image:url(images/1.jpg)"></div>
-					<h2>John Dude</h2>
+					<b>John Dude</b><br>
 					CEO, FBI, ABC
 				</a><!-- end .card-->
 			</div><!-- end .col-3-->
@@ -368,21 +368,12 @@ $(coded).things(and > "stuff");
 
 </div><!-- end .centering -->
 <!-- JS ======================================================= -->
-<script type="text/javascript" src="Cottontail-2/js/lib/jquery-3.1.1.min.js" ></script>
-<script type="text/javascript" src="Cottontail-2/js/lib/jquery.easing.js" ></script>
-<script type="text/javascript" src="Cottontail-2/js/build/production.min.js"></script>
+<script type="text/javascript" src="js/lib/jquery-3.1.1.min.js" ></script>
+<script type="text/javascript" src="js/build/production.min.js"></script>
 
 <script type="text/javascript">
 	$(window).on('load', function() {
 		 $('#calendar').monthly();
-		 $('.carousel').bxSlider({
-			slideWidth: 200,
-			minSlides: 4,
-			maxSlides: 6,
-			slideMargin: 10,
-			moveSlides: 1,
-			auto: true
-		});
 	});
 </script>
 </body>
