@@ -17,7 +17,7 @@ $('.addon-text table').each(function() {
 
 // Check if table is too big for viewport.
 function tableChecker() {
-	$(".addon-text table").each(function() {
+	$(".element-text table").each(function() {
 		// wrapper width (page width)
 		var wrapWidth1 = parseInt($(this).parent().width(), 10),
 			// table width
@@ -31,44 +31,6 @@ function tableChecker() {
 	});
 }
 
-// Call on page load and page resize
+// Call on page load
 tableChecker();
-
-(function($, sr) {
-	var debounce = function(func, threshold, execAsap) {
-			var timeout;
-
-			return function debounced() {
-				var obj = this,
-					args = arguments;
-
-				function delayed() {
-					if (!execAsap)
-						func.apply(obj, args);
-					timeout = null;
-				};
-
-				if (timeout)
-					clearTimeout(timeout);
-				else if (execAsap)
-					func.apply(obj, args);
-
-				timeout = setTimeout(delayed, threshold || 100);
-			};
-		}
-		// smartresize
-	jQuery.fn[sr] = function(fn) {
-		return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
-	};
-
-})(jQuery, 'smartresize');
-
-
-// On resize (with delay)
-$(window).smartresize(function() {
-	$('.mobile-table').removeClass('mobile-table');
-	tableChecker();
-	autogrid();
-});
-
-
+// Also runs within window-resize-functions.js

@@ -6,12 +6,13 @@
 	li {
 		display: inline-block;
 		width:25%;
-		padding:10px;
 		vertical-align: middle;
+		transition:$transition-short;
 	}
 	img {
 		max-width: 100%;
 		height: auto;
+		padding:10px;
 	}
 	&:after {
 		content:'';

@@ -15,4 +15,6 @@ function autogrid() {
 	});
 }
 
+// Call on Load
 autogrid();
+// Also runs within window-resize-functions.js

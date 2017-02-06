@@ -4,7 +4,7 @@
 =========================================*/
 
 /* Keep bright enough on to see on white */
-$highlight:#A53012;
+$highlight:#8CAC3E;
 
 /* OTHER VARIABLES
 =========================================*/
@@ -22,6 +22,14 @@ $br:3px;
 }
 
 [class*='element-'] {
+}
+
+.icon {
+	height: 1em;
+	width:1em;
+	svg {
+		fill: blue;
+	}
 }
 /* GRID SYSTEM
 =========================================*/
@@ -147,7 +155,6 @@ div[class*='align-cr'] {
 }
 /* IMPORT
 =========================================*/
-@import 'open-iconic';
 @import 'nav';
 @import 'element-text';
 @import 'element-accordion';

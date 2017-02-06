@@ -1,13 +1,37 @@
-#nav-desktop {
+/* DESKTOP NAVIGATION STYLES
+======================================================== */
+.nav-desktop {
+	>ul {
+		white-space: nowrap;
+		display: inline-block;
+	}
+	
+	/* PARENT ARROWS ======================*/
+	.nav-parent > a:after {
+		content: '›';
+		width: 1em;
+		height: 1em;
+		text-align: center;
+		font-weight: 700;
+		display: inline-block;
+		vertical-align: baseline;
+		line-height: 1em;
+		font-size: 1.3em;
+		font-family: serif;
+		transition:$transition-short;
+	}
+	.nav-parent:hover > a:after {
+		transform:rotate(90deg);
+	}
 
-	/* GLOBAL NAV =========================================*/
+	/* DROPDOWN ANIMATION ==================*/
 	li:hover {
 		>ul {
 			transform:scaleY(1);
 		}
 	}
 
-	/* TOP LEVEL =========================================*/
+	/* TOP LEVEL ===========================*/
 	>ul>li {
 		display: inline-block;
 		position: relative;
@@ -23,7 +47,7 @@
 		}
 	}
 
-	/* DROPDOWN NAV =========================================*/
+	/* 2ND LEVEL ============================*/
 	>ul>li ul {
 		position: absolute;
 		top:100%;
@@ -34,7 +58,7 @@
 		transition:$transition-short;
 		min-width: 100%;
 		text-align: left;
-		z-index: 1;
+		z-index: 100;
 		li {
 			min-width: 100%;
 			display: block;
@@ -44,13 +68,15 @@
 			display: block;
 			padding:1em;
 		}
-		a:hover {
+		li:hover {
 			background: $highlight;
+		}
+		li:hover > a, a:hover {
 			color:#fff;
 		}
 	}
 
-	/* 2ND DROPDOWN NAV =========================================*/
+	/* 3RD+ LEVEL ===========================*/
 	>ul>li>ul>li ul {
 		position: absolute;
 		top:0;
@@ -60,5 +86,90 @@
 		li {
 			position: relative;
 		}
+	}
+}
+
+/* MOBILE NAVIGATION STYLES
+================================================================ */
+
+/* Button to open mobile nav */
+#hamburger {
+	display: none;
+	font-size:3rem;
+	padding:1rem;
+}
+
+.nav-mobile {
+	position: fixed;
+	z-index: 1000;
+	top:0;
+	left:-100vw;
+	width:100vw;
+	max-width: 100%;
+	height: 100vh;
+	background: $highlight;
+	overflow: auto;
+	transition:$transition-long;
+
+	ul {
+		transition:$transition-long;
+	}
+
+	a:link, a:visited {
+		padding:1em;
+		display: block;
+		font-size:1.2em;
+		color:#fff;
+		border-bottom: 1px solid rgba(0,0,0,.2);
+	}
+
+	/* Back & Close buttons in mobile nav */
+	a.mobile-dropdown-back,
+	a.mobile-close {
+		background: rgba(0,0,0,.6);
+		font-size:.8em;
+		font-weight: bold;
+		text-align: right;
+		padding-right:1.2em;
+	}
+
+	/* Titles in mobile dropdown menus*/
+	.mobile-dropdown-title {
+		color: #fff;
+		font-size: 2em;
+		line-height: 2.4em;
+		padding: 1rem;
+		opacity: .6;
+		font-weight: 100;
+	}
+
+	/* DROPDOWN BACKGROUNDS ====================*/
+	>ul>li ul {
+		position: fixed;
+		z-index: 1000;
+		top:0;
+		left:-100vw;
+		width:100vw;
+		max-width: 100%;
+		height: 100vh;
+		background: $highlight;
+		overflow: auto;
+	}
+
+	/* PARENT ARROWS =============================*/
+	.nav-parent > a:before {
+		content: '';
+		border:2px solid #fff;
+		border-right:0px solid transparent;
+		border-bottom:0px solid transparent;
+		transform:rotate(-45deg);
+		transform-origin:center;
+		width:.5em;
+		height: .5em;
+		display: inline-block;
+		vertical-align: baseline;
+		position: relative;
+		top: -.05em;
+		margin-right:10px;
 	}
 }

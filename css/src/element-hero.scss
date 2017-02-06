@@ -28,8 +28,15 @@
 	justify-content:center;
 	text-align: center;
 	font-size:50px;
+	font-size: calc( 24px + (50 - 24) * (100vw - 400px) / (1000 - 400) );
 	line-height: 1.3em;
 	color:#fff;
 	padding:$padding;
 	background: rgba(0,0,0,.2);
+}
+
+@media screen and (min-width: 1000px) {
+	.hero-text {
+		font-size:50px;
+	}
 }
