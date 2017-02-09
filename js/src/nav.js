@@ -1,4 +1,5 @@
 /* EXTERNAL LINK WARNING
+  (Uncomment only if needed)
 =========================================*
 	$('nav a').on('click', function(e){
 		e.preventDefault();
@@ -21,6 +22,22 @@
 =========================================*/
 $('#main-nav li:has(ul)').addClass('nav-parent');
 
+/* ENSURE MAIN NAV DOES NOT GO OFF SCREEN
+=========================================*/
+$(document.body).on('mouseover', 'nav li', function(event) {
+	if($('>ul', this).length) {
+		var windowWidth = $(window).width(),
+			menuWidth = $('>ul', this).outerWidth(),
+			parentWidth = $('>ul', this).parent().outerWidth(),
+			parentOffset = $('>ul', this).parent().offset();
+
+		if((menuWidth + parentOffset.left + parentWidth) > windowWidth) {
+			$('>ul', this).addClass('menu-reposition');
+		} else {
+			$('>ul', this).removeClass('menu-reposition');
+		}
+	}
+});
 
 
 /* MEASURE NAV WIDTH & SEE IF MOBILE NAV SHOULD BE USED
@@ -39,7 +56,7 @@ function mobilenavToggle(){
 	// Toggle nav style
 	if (b>a){
 		$('#main-nav').removeClass('nav-desktop').addClass('nav-mobile');
-		$('#hamburger').show();
+		$('#hamburger').show().css('display','block');
 	}
 
 }

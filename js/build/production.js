@@ -59,6 +59,25 @@ $('.document-list-search').on('input', function() {
 		}
 	});
 });
+$('.rating-widget').on('click','.star',function(event){
+	var i = $(this).index(),
+  		i = i+1;
+  $(this).parent().find('input').attr('value',i);
+  $(this).parent().find('.star').html('<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-empty"></use></svg>');
+  $(this).parent().find('.star:lt('+i+')').html('<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>');
+  event.preventDefault();
+});
+
+$(document).on('mouseover','.star',function(){
+	var i = $(this).index(),
+  		i = i+1;
+  $(this).parent().find('.hovered').removeClass('hovered');
+  $(this).parent().find('.star:lt('+i+')').addClass('hovered');
+});
+
+$(document).on('mouseout','.rating-widget',function(){
+	$('.hovered',this).removeClass('hovered');
+});
 /* CLICK LINK WITH DATA-IMAGE-ZOOM
 =========================================*/
 $('a[data-image-zoom]').click(function(event) {
@@ -75,7 +94,7 @@ $('a[data-image-zoom]').click(function(event) {
 
 	/* ADD MODAL
 	=========================================*/
-	$('body').append("<div class='image-zoom-overlay'><div class='image-zoom' style='background-image:url("+largeImg+");'></div><div class='image-zoom-controls'><a href='#' id='regress-image-zoom'><i class='oi' data-glyph='arrow-thick-left'></i></a><a href='#' id='image-zoom-size-toggle'></a><a href='#' id='close-image-zoom'><i class='oi' data-glyph='circle-x'></i></a><a href='#' id='advance-image-zoom'><i class='oi' data-glyph='arrow-thick-right'></i></a></div>");
+	$('body').append("<div class='image-zoom-overlay'><div class='image-zoom' style='background-image:url("+largeImg+");'></div><div class='image-zoom-controls'><a href='#' id='regress-image-zoom'><svg class='icon'><use xlink:href='images/sprite.svg#icon-chevron-left' /></svg></a><a href='#' id='image-zoom-size-toggle'><svg class='icon'><use xlink:href='images/sprite.svg#icon-arrows-in' /></svg></a><a href='#' id='close-image-zoom'><svg class='icon'><use xlink:href='images/sprite.svg#icon-times' /></svg></a><a href='#' id='advance-image-zoom'><svg class='icon'><use xlink:href='images/sprite.svg#icon-chevron-right' /></svg></a></div>");
 	$('.image-zoom-overlay').offset();
 	$('.image-zoom-overlay').addClass('image-zoom-visible');
 
@@ -985,6 +1004,7 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 }(jQuery));
 
 /* EXTERNAL LINK WARNING
+  (Uncomment only if needed)
 =========================================*
 	$('nav a').on('click', function(e){
 		e.preventDefault();
@@ -1007,6 +1027,22 @@ Monthly 2.2.0 by Kevin Thornbloom is licensed under a Creative Commons Attributi
 =========================================*/
 $('#main-nav li:has(ul)').addClass('nav-parent');
 
+/* ENSURE MAIN NAV DOES NOT GO OFF SCREEN
+=========================================*/
+$(document.body).on('mouseover', 'nav li', function(event) {
+	if($('>ul', this).length) {
+		var windowWidth = $(window).width(),
+			menuWidth = $('>ul', this).outerWidth(),
+			parentWidth = $('>ul', this).parent().outerWidth(),
+			parentOffset = $('>ul', this).parent().offset();
+
+		if((menuWidth + parentOffset.left + parentWidth) > windowWidth) {
+			$('>ul', this).addClass('menu-reposition');
+		} else {
+			$('>ul', this).removeClass('menu-reposition');
+		}
+	}
+});
 
 
 /* MEASURE NAV WIDTH & SEE IF MOBILE NAV SHOULD BE USED
@@ -1025,7 +1061,7 @@ function mobilenavToggle(){
 	// Toggle nav style
 	if (b>a){
 		$('#main-nav').removeClass('nav-desktop').addClass('nav-mobile');
-		$('#hamburger').show();
+		$('#hamburger').show().css('display','block');
 	}
 
 }

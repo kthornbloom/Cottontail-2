@@ -4,6 +4,22 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		svgstore: {
+			options: {
+				prefix: 'icon-', // id prefix
+				svg: {
+					viewBox : '0 0 100 100',
+					xmlns: 'http://www.w3.org/2000/svg'
+				},
+				cleanup: ['fill', 'style']
+			},
+			default : {
+				files: {
+				'images/sprite.svg': ['icons/*.svg'],
+				},
+			},
+		},
+
 		/* COMBINE JS FILES
 		=========================================*/
 		concat: {
@@ -59,6 +75,13 @@ module.exports = function(grunt) {
 		/* WATCH FILES FOR CHANGES, THEN RUN TASKS
 		=========================================*/
 		watch: {
+			icons: {
+				files: ['icons/*.svg'],
+				tasks: ['svgstore'],
+				options: {
+					spawn: false
+				},
+			},
 			scripts: {
 				files: ['js/*.js'],
 				tasks: ['concat', 'uglify'],
@@ -111,7 +134,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-svgstore');
 
-	grunt.registerTask('default', ['concat','uglify','browserSync','watch','sass','autoprefixer','cssmin']);
+	grunt.registerTask('default', ['svgstore','concat','uglify','browserSync','watch','sass','autoprefixer','cssmin']);
 
 };

@@ -73,17 +73,9 @@
 	}
 }
 
-#image-zoom-size-toggle:after {
-	content:'\e06e';
-	font-family: Icons;
-}
 
 .contain {
 	.image-zoom {
 		background-size:contain;
-	}
-	#image-zoom-size-toggle:after {
-		content:'\e06d';
-		font-family: Icons;
 	}
 }

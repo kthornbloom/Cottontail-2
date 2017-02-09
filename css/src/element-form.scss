@@ -1,53 +1,91 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
 .element-form {
 	line-height: 1.5em;
-	fieldset {
+	.grid {
 		background:#F3F3F3;
-		padding: 3em $padding $padding $padding;
-		margin-top:$padding;
-		position: relative;
-		border:$br;
 	}
-	legend {
+	.legend {
 		font-weight: bold;
-		font-size:1.2em;
-		position: absolute;
-		top:$padding;
+		font-size:1em;
+		line-height: 1.2em;
+		padding:1em 0 .5em 0;
+		color:#373737;
 	}
 	label {
 		display: block;
-		font-size:.85em;
-		font-weight: bold;
-		margin-top:1em;
+		font-size: .8em;
+		font-weight: 700;
+		line-height: 1.3em;
+		text-transform: uppercase;
+		color: #737373;
 	}
 	textarea, input:not([type=submit]):not([type=radio]):not([type=checkbox]) {
-		padding:1em;
+		padding:.6em 0;
 		border:0;
-		background:#fff;
+		background:transparent;
 		font-size:1rem;
+		font-family: inherit;
 		width:100%;
+		height: 3em;
 		max-width: 400px;
 		color:#555;
-		border:1px solid #ccc;
-		border-radius:$br;
+		outline: none;
+		border-bottom:2px solid #ccc;
+		box-shadow:inset 0 0 0 0 $highlight;
 		transition:$transition-short;
+		@include placeholder {
+			font-style:italic;
+		}
 	}
 	textarea:hover, input:not([type=submit]):not([type=radio]):not([type=checkbox]):hover {
-		color:#000;
+		border-bottom:2px solid #737373;
+		background: rgba(0,0,0,.05);
+		padding:.6em;
 	}
 	textarea:focus, input:not([type=submit]):not([type=radio]):not([type=checkbox]):focus {
-		border:1px solid #222;
-		color:#000;
-		outline: none;
+		border-bottom:2px solid $highlight;
+		box-shadow:inset 0 -3em 0 0 $highlight;
+		color:#fff;
+		padding:.6em;
 	}
-
+	textarea:focus + label, input:not([type=submit]):not([type=radio]):not([type=checkbox]):focus + label {
+		color:$highlight;
+	}
+	input:not([type=submit]):not([type=radio]):not([type=checkbox]):focus {
+		@include placeholder {
+			color: #fff;
+		}
+	}
+	textarea {
+		height: 8em;
+		padding:.6em;
+		border:2px solid #ccc;
+	}
+	textarea:hover {
+		border:2px solid #737373;
+	}
+	textarea:focus {
+		border:2px solid $highlight;
+		background: $highlight;
+	}
+	/* required */
 	textarea:required, input:not([type=submit]):not([type=radio]):not([type=checkbox]):required {
-		border:1px solid #e37070;
-		box-shadow:inset 5px 0 0 0 #e37070;
+		border-bottom:2px solid #e37070;
 	}
 
 	textarea:required:valid, input:not([type=submit]):not([type=radio]):not([type=checkbox]):required:valid {
-		border:1px solid #31EB82;
-		box-shadow:inset 5px 0 0 0 #31EB82;
+		border-bottom:2px solid $highlight;
+	}
+
+	textarea:required + label:after, input:not([type=submit]):not([type=radio]):not([type=checkbox]):required + label:after{
+		content:'*';
+		color:#e37070;
 	}
 
 	/* RADIO BUTTONS
@@ -147,6 +185,39 @@
 	input[type="submit"]:hover {
 		background: rgba($highlight, .9);
 		cursor: pointer;
+	}
+
+	/* STAR RATINGS
+	=========================================*/
+	.rating-widget {
+		opacity: .7;
+		.star {
+			float:left;
+			padding:.1em;
+		}
+		svg {
+			width:18px;
+			height: 18px;
+		}
+		.hovered {
+			svg {
+				fill:$highlight;
+				use, polygon, path{
+					fill:$highlight;
+				}
+			}
+		}
+		&:after {
+			content:'';
+			display: block;
+			clear:both;
+		}
+	}
+	.rating-widget:hover {
+		opacity: 1;
+	}
+	.rating-result {
+		display: none;
 	}
 
 }

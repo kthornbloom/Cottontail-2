@@ -13,21 +13,38 @@
 	<!-- CSS ====================================================== -->
 	<link rel="stylesheet" href="css/build/stylesheet.min.css">
 </head>
-<body style="color:red">
+<body>
 <b>TO DO:</b><br>
 Slideshow<br>
-Form Columns<br>
-Page Type Icons<br>
-Soc Meat<br>
-<object class="icon" type="image/svg+xml" data="icons/link.svg"></object>
+News/Events<br>
+Tabbed Element<br>
+Shopping cart demo<br>
+Email Demo<br>
+Addon Titles<br>
+Carousel disable nav while animating?<br>
+Docs (text formatting class, resize function js, icons, buttons, etc)<br>
 
-<svg viewBox="0 0 32 32">
-    <use xlink:href="#icon-phone"></use>
-  </svg>
-<a href="#" id="hamburger">≡</a>
+<svg viewBox="0 0 32 32" class="icon">
+<use xlink:href="images/sprite.svg#icon-hamburger"></use>
+</svg>
+
+<a href="#" id="hamburger">
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-hamburger" /></svg>
+</a>
 
 <nav class="centering nav-desktop" id="main-nav">
 	<ul>
+		<li><a href="#" class="normal-page">Normal</a></li>		
+		<li>
+			<a href="http://www.google.com" class="external-page">
+			External <svg class="icon"><use xlink:href="images/sprite.svg#icon-external"></use></svg>
+			</a>
+		</li>
+		<li><a href="example.pdf" class="document-page">Document <svg class="icon"><use xlink:href="images/sprite.svg#icon-document"></use></svg></a></li>
+		<li><a href="#" class="nav-only-page">Nav Only</a></li>
+		<li><a href="#" class="misc-page">Misc</a></li>
+		
+		<li><a href="#" class="normal-page">Normal</a></li>
 		<li><a href="#" class="normal-page">Normal</a></li>
 		<li><a href="http://www.google.com" class="normal-page">Normal Page</a>
 			<ul>
@@ -42,18 +59,6 @@ Soc Meat<br>
 				</li>
 			</ul>
 		</li>
-		<li>
-			<a href="http://www.google.com" class="external-page">
-			External
-				
-			</a>
-		</li>
-		<li><a href="example.pdf" class="document-page">Document</a></li>
-		<li><a href="#" class="nav-only-page">Nav Only</a></li>
-		<li><a href="#" class="misc-page">Misc</a></li>
-		
-		<li><a href="#" class="normal-page">Normal</a></li>
-		<li><a href="#" class="normal-page">Normal</a></li>
 	</ul>
 </nav>
 
@@ -89,18 +94,8 @@ Soc Meat<br>
 		<ul class="carousel">
 			<li><img src="images/1.jpg" /></li>
 			<li><img src="images/2.jpg" /></li>
-			<li><img src="images/odd-size.jpg" /></li>
 			<li><img src="images/3.jpg" /></li>
 			<li><img src="images/4.jpg" /></li>
-			<li><img src="images/1.jpg" /></li>
-		</ul>
-
-		<ul class="carousel">
-			<li><img src="images/4.jpg" /></li>
-			<li><img src="images/3.jpg" /></li>
-			<li><img src="images/2.jpg" /></li>
-			<li><img src="images/4.jpg" /></li>
-			<li><img src="images/odd-size.jpg" /></li>
 			<li><img src="images/1.jpg" /></li>
 		</ul>
 	</div><!-- end .element-carousel -->
@@ -122,53 +117,85 @@ $(coded).things(and > "stuff");
 			</div>
 		</div><!-- end .document-list-header -->
 		<div class="document-list">
-			<a href="#"><b>Document Name John</b> <i>(37kb)</i></a>
-			<a href="#"><b>Document Name Bob</b> <i>(37kb)</i></a>
-			<a href="#"><b>Document Name Smith</b> <i>(37kb)</i></a>
-			<a href="#"><b>Document Name Sue</b> <i>(37kb)</i></a>
-			<a href="#"><b>Document Name Bob</b> <i>(37kb)</i></a>
-			<a href="#"><b>Document Name John</b> <i>(37kb)</i></a>
-			<a href="#"><b>Document Name Bobby</b> <i>(37kb)</i></a>
-			<a href="#"><b>Document Name Ted</b> <i>(37kb)</i></a>
+			<a href="#"><svg class="icon"><use xlink:href="images/sprite.svg#icon-download"></use></svg><b>Document Name John</b> <i>(37kb)</i></a>
+			<a href="#"><svg class="icon"><use xlink:href="images/sprite.svg#icon-download"></use></svg><b>Document Name Bob</b> <i>(37kb)</i></a>
+			<a href="#"><svg class="icon"><use xlink:href="images/sprite.svg#icon-download"></use></svg><b>Document Name Smith</b> <i>(37kb)</i></a>
+			<a href="#"><svg class="icon"><use xlink:href="images/sprite.svg#icon-download"></use></svg><b>Document Name Sue</b> <i>(37kb)</i></a>
+			<a href="#"><svg class="icon"><use xlink:href="images/sprite.svg#icon-download"></use></svg><b>Document Name Bob</b> <i>(37kb)</i></a>
+			<a href="#"><svg class="icon"><use xlink:href="images/sprite.svg#icon-download"></use></svg><b>Document Name John</b> <i>(37kb)</i></a>
+			<a href="#"><svg class="icon"><use xlink:href="images/sprite.svg#icon-download"></use></svg><b>Document Name Bobby</b> <i>(37kb)</i></a>
+			<a href="#"><svg class="icon"><use xlink:href="images/sprite.svg#icon-download"></use></svg><b>Document Name Ted</b> <i>(37kb)</i></a>
+
 		</div><!-- end .document-list -->
 	</div><!-- end .element-document-list -->
 
 	<div class="col-12 element-form">
-		<form action="" class="grid-720">
-		<fieldset class="col-6">
-			<legend>Legend</legend>
+		<form action="">
 
-			<label>Text Input</label>
-			<input type="text" value="Some text">
-			<label>Required Text Input</label>
-			<input type="text" placeholder="placeholder" required>
-			<label>Date</label>
-			<input type="date">
-			<label>Textarea</label>
-			<textarea></textarea>
-		</fieldset>
-		<fieldset class="col-6">
-			<legend>Legend 2</legend>
-			<label>Select Menu</label>
-			<select>
-				<option value="Option 1">Option 1</option>
-				<option value="Option 2">Option 2</option>
-				<option value="Option 3">Option 3</option>
-				<option value="Option 4">Option 4</option>
-			</select>
+				<div class="legend">Fieldset Title</div>
+			<div class="grid grid-pad" data-grid-min="300">
+				<div class="col-4">
+					<input type="text" value="Some text">
+					<label>Text Input</label>
+				</div>
+				<div class="col-4">
+					<input type="text" placeholder="placeholder" required>
+					<label>Required Text Input</label>
+				</div>
+				<div class="col-4">
+					<input type="date">
+					<label>Date</label>
+				</div>
+				<div class="col-4">
+					<textarea></textarea>
+					<label>Textarea</label>
+				</div>
+				<div class="col-4">
+					<div class="rating-widget">
+						<a href="#" class="star"><svg class="icon"><use xlink:href="images/sprite.svg#icon-star-empty"></use></svg></a>
+						<a href="#" class="star"><svg class="icon"><use xlink:href="images/sprite.svg#icon-star-empty"></use></svg></a>
+						<a href="#" class="star"><svg class="icon"><use xlink:href="images/sprite.svg#icon-star-empty"></use></svg></a>
+						<a href="#" class="star"><svg class="icon"><use xlink:href="images/sprite.svg#icon-star-empty"></use></svg></a>
+						<a href="#" class="star"><svg class="icon"><use xlink:href="images/sprite.svg#icon-star-empty"></use></svg></a>
+						<input type="text" class="rating-result">
+					</div>
+					<label>Rate this</label>
+				</div>
+				<div class="col-4">
+					<input type="file" value="">
+					<label>Upload</label>
+				</div>
+			</div>
 
-			<label>Radio Group</label>
-			<input required type="radio" name="group1" id="r1" value="1" /><label for="r1"> Yes</label>
-			<input required type="radio" name="group1" id="r2" value="1" /><label for="r2"> No</label>
-
-			<label>Checkbox Group</label>
-			<input type="checkbox" name="group2" id="c1" value="1" /><label for="c1"> Yes</label>
-			<input type="checkbox" name="group2" id="c2" value="1" /><label for="c2"> No</label>
-			
-			<input type="submit" value="Go">
-		</fieldset>
+			<div class="legend">Fieldset Title</div>
+			<div class="grid grid-pad" data-grid-min="300">
+				<div class="col-4">
+					<label>Select Menu</label>
+					<select>
+						<option value="Option 1">Option 1</option>
+						<option value="Option 2">Option 2</option>
+						<option value="Option 3">Option 3</option>
+						<option value="Option 4">Option 4</option>
+					</select>
+				</div>
+				<div class="col-4">
+					<label>Radio Group</label>
+					<input required type="radio" name="group1" id="r1" value="1" /><label for="r1"> Yes</label>
+					<input required type="radio" name="group1" id="r2" value="1" /><label for="r2"> No</label>
+				</div>
+				<div class="col-4">
+					<label>Checkbox Group</label>
+					<input type="checkbox" name="group2" id="c1" value="1" /><label for="c1"> Yes</label>
+					<input type="checkbox" name="group2" id="c2" value="1" /><label for="c2"> No</label>
+				</div>
+				<div class="col-4 text-formatting">
+					Here's some text within a form. It should have full CSS styling available.
+				</div>
+			</div>
+			<div>
+				<input type="submit" value="Go">
+			</div>
 		</form>
-
 	</div><!-- end .element-form -->
 
 	<div class="col-12 element-featured-text">
@@ -254,11 +281,11 @@ $(coded).things(and > "stuff");
 			<div class="col-4">
 				<div class="card review">
 				<div class="star-rating">
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-empty" data-glyph="star"></i>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-empty"></use></svg>
 				</div>
 				<h2>Review Title</h2>
 				This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet.
@@ -267,11 +294,11 @@ $(coded).things(and > "stuff");
 			<div class="col-4">
 				<div class="card review">
 				<div class="star-rating">
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-empty" data-glyph="star"></i>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-empty"></use></svg>
 				</div>
 				<h2>Review Title</h2>
 				This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet.
@@ -280,11 +307,11 @@ $(coded).things(and > "stuff");
 			<div class="col-4">
 				<div class="card review">
 				<div class="star-rating">
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-full" data-glyph="star"></i>
-					<i class="oi review-star-empty" data-glyph="star"></i>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+					<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-empty"></use></svg>
 				</div>
 				<h2>Review Title</h2>
 				This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet.
@@ -375,11 +402,32 @@ $(coded).things(and > "stuff");
 				<td>Table Cell</td>
 			</tr>
 		</table>
+		<h2>Buttons</h2>
+		<a href="#" class="button">Button</a>
+		<a href="#" class="button-alt">Button</a>
+		<a href="#" class="button-small">Button</a>
+		<a href="#" class="button-small-alt">Button</a>
+		<div class="social-media">
+			<a href="#" id="soc-blogger"><svg class="icon"><use xlink:href="images/sprite.svg#icon-blogger"></use></svg></a>
+			<a href="#" id="soc-facebook"><svg class="icon"><use xlink:href="images/sprite.svg#icon-facebook"></use></svg></a>
+			<a href="#" id="soc-flickr"><svg class="icon "><use xlink:href="images/sprite.svg#icon-flickr"></use></svg></a>
+			<a href="#" id="soc-google-plus"><svg class="icon"><use xlink:href="images/sprite.svg#icon-google-plus"></use></svg></a>
+			<a href="#" id="soc-instagram"><svg class="icon"><use xlink:href="images/sprite.svg#icon-instagram"></use></svg></a>
+			<a href="#" id="soc-linkedin"><svg class="icon"><use xlink:href="images/sprite.svg#icon-linkedin"></use></svg></a>
+			<a href="#" id="soc-paypal"><svg class="icon"><use xlink:href="images/sprite.svg#icon-paypal"></use></svg></a>
+			<a href="#" id="soc-pinterest"><svg class="icon"><use xlink:href="images/sprite.svg#icon-pinterest"></use></svg></a>
+			<a href="#" id="soc-soundcloud"><svg class="icon"><use xlink:href="images/sprite.svg#icon-soundcloud"></use></svg></a>
+			<a href="#" id="soc-tumblr"><svg class="icon"><use xlink:href="images/sprite.svg#icon-tumblr"></use></svg></a>
+			<a href="#" id="soc-twitter"><svg class="icon"><use xlink:href="images/sprite.svg#icon-twitter"></use></svg></a>
+			<a href="#" id="soc-vimeo"><svg class="icon"><use xlink:href="images/sprite.svg#icon-vimeo"></use></svg></a>
+			<a href="#" id="soc-youtube"><svg class="icon"><use xlink:href="images/sprite.svg#icon-youtube"></use></svg></a>
+		</div>
 	</div>
 
 	
 
 </div><!-- end .centering -->
+
 <!-- JS ======================================================= -->
 <script type="text/javascript" src="js/lib/jquery-3.1.1.min.js" ></script>
 <script type="text/javascript" src="js/build/production.min.js"></script>
@@ -389,5 +437,6 @@ $(coded).things(and > "stuff");
 		 $('#calendar').monthly();
 	});
 </script>
+
 </body>
 </html>

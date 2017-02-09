@@ -5,16 +5,28 @@
 		white-space: nowrap;
 		display: inline-block;
 	}
+
+	/* PAGE TYPE ICONS =====================*/
+	.icon {
+		width: 1em;
+		height: 1em;
+		fill:rgba(0,0,0,.5);
+		use, polygon, path{
+			fill:rgba(0,0,0,.5);
+		}
+	}
 	
 	/* PARENT ARROWS ======================*/
 	.nav-parent > a:after {
-		content: '›';
-		width: 1em;
-		height: 1em;
+		content: '';
+		border:.3em solid transparent;
+		border-left:.3em solid #222;
+		position: relative;
+		left:.2em;
 		text-align: center;
 		font-weight: 700;
 		display: inline-block;
-		vertical-align: baseline;
+		vertical-align: middle;
 		line-height: 1em;
 		font-size: 1.3em;
 		font-family: serif;
@@ -22,6 +34,8 @@
 	}
 	.nav-parent:hover > a:after {
 		transform:rotate(90deg);
+		top:.15em;
+		border-left:.3em solid #fff;
 	}
 
 	/* DROPDOWN ANIMATION ==================*/
@@ -44,6 +58,12 @@
 		background: $highlight;
 		>a:link, >a:visited {
 			color:#fff;
+		}
+		.icon {
+			fill:#fff;
+			use, polygon, path{
+				fill:#fff;
+			}
 		}
 	}
 
@@ -76,6 +96,11 @@
 		}
 	}
 
+	>ul>li ul.menu-reposition {
+		left:auto;
+		right:0;
+	}
+
 	/* 3RD+ LEVEL ===========================*/
 	>ul>li>ul>li ul {
 		position: absolute;
@@ -87,6 +112,10 @@
 			position: relative;
 		}
 	}
+	>ul>li>ul>li ul.menu-reposition {
+		left:auto;
+		right:100%;
+	}
 }
 
 /* MOBILE NAVIGATION STYLES
@@ -95,8 +124,7 @@
 /* Button to open mobile nav */
 #hamburger {
 	display: none;
-	font-size:3rem;
-	padding:1rem;
+	padding:1em;
 }
 
 .nav-mobile {

@@ -14,8 +14,11 @@ $padding:15px;
 $maxwidth: 1000px;
 $br:3px;
 
-/* GLOBAL STUFF
+/* GLOBAL MISC
 =========================================*/
+body {
+	font-size:14px;
+}
 .centering {
 	max-width: $maxwidth;
 	margin:0 auto;
@@ -24,13 +27,68 @@ $br:3px;
 [class*='element-'] {
 }
 
+.card {
+	display: block;
+	background: #eee;
+	padding:calc(#{$padding} * 2);
+	border-radius:3px;
+}
+
+/* BUTTONS
+=========================================*/
+a.button {
+	padding:.75em 3em;
+	border-radius:3em;
+	background: $highlight;
+	color:#fff;
+	display: inline-block;
+}
+a.button:hover {
+	filter:brightness(1.2);
+}
+a.button:active {
+	filter:brightness(1.3);
+}
+a.button-alt {
+	@extend a.button;
+	background: #444;
+}
+a.button-small {
+	display: inline-block;
+	padding:.25em 1em;
+	color:#fff;
+	font-size:.75em;
+	text-transform: uppercase;
+	background: $highlight;
+	font-weight: bold;
+	border-radius:3em;
+}
+a.button-small:hover {
+	filter:brightness(1.2);
+}
+a.button-small:active {
+	filter:brightness(1.3);
+}
+a.button-small-alt {
+	@extend a.button-small;
+	background: #444;
+}
+
+/* ICONS
+=========================================*/
+
 .icon {
+	display: inline-block;
+	width: 1em;
 	height: 1em;
-	width:1em;
-	svg {
-		fill: blue;
+	vertical-align: middle;
+	fill:currentColor;
+	use, polygon, path{
+		fill:currentColor;
 	}
 }
+
+
 /* GRID SYSTEM
 =========================================*/
 
@@ -169,16 +227,7 @@ div[class*='align-cr'] {
 @import 'element-reviews';
 @import 'element-staff';
 @import 'element-video-gallery';
-
-/* GENERAL CONTENT
-=========================================*/
-.card {
-	display: block;
-	background: #eee;
-	padding:calc(#{$padding} * 2);
-	border-radius:3px;
-}
-
+@import 'social-media';
 /* EMBEDS
 =========================================*/
 .rwd-embed {

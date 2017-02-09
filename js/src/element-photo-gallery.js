@@ -14,7 +14,7 @@ $('a[data-image-zoom]').click(function(event) {
 
 	/* ADD MODAL
 	=========================================*/
-	$('body').append("<div class='image-zoom-overlay'><div class='image-zoom' style='background-image:url("+largeImg+");'></div><div class='image-zoom-controls'><a href='#' id='regress-image-zoom'><i class='oi' data-glyph='arrow-thick-left'></i></a><a href='#' id='image-zoom-size-toggle'></a><a href='#' id='close-image-zoom'><i class='oi' data-glyph='circle-x'></i></a><a href='#' id='advance-image-zoom'><i class='oi' data-glyph='arrow-thick-right'></i></a></div>");
+	$('body').append("<div class='image-zoom-overlay'><div class='image-zoom' style='background-image:url("+largeImg+");'></div><div class='image-zoom-controls'><a href='#' id='regress-image-zoom'><svg class='icon'><use xlink:href='images/sprite.svg#icon-chevron-left' /></svg></a><a href='#' id='image-zoom-size-toggle'><svg class='icon'><use xlink:href='images/sprite.svg#icon-arrows-in' /></svg></a><a href='#' id='close-image-zoom'><svg class='icon'><use xlink:href='images/sprite.svg#icon-times' /></svg></a><a href='#' id='advance-image-zoom'><svg class='icon'><use xlink:href='images/sprite.svg#icon-chevron-right' /></svg></a></div>");
 	$('.image-zoom-overlay').offset();
 	$('.image-zoom-overlay').addClass('image-zoom-visible');
 
