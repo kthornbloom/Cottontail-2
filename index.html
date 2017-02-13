@@ -14,19 +14,6 @@
 	<link rel="stylesheet" href="css/build/stylesheet.min.css">
 </head>
 <body>
-<b>TO DO:</b><br>
-Slideshow<br>
-News/Events<br>
-Tabbed Element<br>
-Shopping cart demo<br>
-Email Demo<br>
-Addon Titles<br>
-Carousel disable nav while animating?<br>
-Docs (text formatting class, resize function js, icons, buttons, etc)<br>
-
-<svg viewBox="0 0 32 32" class="icon">
-<use xlink:href="images/sprite.svg#icon-hamburger"></use>
-</svg>
 
 <a href="#" id="hamburger">
 	<svg class="icon"><use xlink:href="images/sprite.svg#icon-hamburger" /></svg>
@@ -42,11 +29,9 @@ Docs (text formatting class, resize function js, icons, buttons, etc)<br>
 		</li>
 		<li><a href="example.pdf" class="document-page">Document <svg class="icon"><use xlink:href="images/sprite.svg#icon-document"></use></svg></a></li>
 		<li><a href="#" class="nav-only-page">Nav Only</a></li>
-		<li><a href="#" class="misc-page">Misc</a></li>
-		
 		<li><a href="#" class="normal-page">Normal</a></li>
 		<li><a href="#" class="normal-page">Normal</a></li>
-		<li><a href="http://www.google.com" class="normal-page">Normal Page</a>
+		<li><a href="http://www.google.com" class="normal-page">Has Menu</a>
 			<ul>
 				<li><a href="#" class="normal-page">Lvl 1</a></li>
 				<li><a href="#" class="normal-page">Lvl 1</a></li>
@@ -70,7 +55,9 @@ Docs (text formatting class, resize function js, icons, buttons, etc)<br>
 		</div>
 	</div><!-- end .element-hero-full -->
 
+
 	<div class="col-12 element-accordion">
+		<div class="element-title">Accordion</div>
 		<div class="accordion-topic">Accordion Topic</div>
 		<div class="accordion-result">Accordion Result</div>
 		<div class="accordion-topic">Accordion Topic</div>
@@ -85,12 +72,12 @@ Docs (text formatting class, resize function js, icons, buttons, etc)<br>
 	</div><!-- end .element-accordion -->
 
 	<div class="col-12 element-calendar">
-		<h2>Calendar</h2>
+		<div class="element-title">Calendar</div>
 		<div class="monthly" id="calendar"></div>
 	</div><!-- end .element-calendar -->
 
 	<div class="col-12 element-carousel">
-		<h2>Carousel</h2>
+		<div class="element-title">Carousel</div>
 		<ul class="carousel">
 			<li><img src="images/1.jpg" /></li>
 			<li><img src="images/2.jpg" /></li>
@@ -101,6 +88,7 @@ Docs (text formatting class, resize function js, icons, buttons, etc)<br>
 	</div><!-- end .element-carousel -->
 
 	<div class="col-12 element-code">
+		<div class="element-title">Code</div>
 		<pre><code>
 This is where you can put
 $(coded).things(and > "stuff");
@@ -129,7 +117,54 @@ $(coded).things(and > "stuff");
 		</div><!-- end .document-list -->
 	</div><!-- end .element-document-list -->
 
+	<div class="col-12 element-events">
+
+		<div class="element-title">Events</div>
+
+		<a href="#" class="event">
+			<div class="event-date">
+				<div>FEB</div><div>29</div>
+			</div>
+			<div class="event-info">
+				<div class="event-name">Super Great Event Name</div>
+				<div class="event-description">This event features music, fun, and burritos. We also have a bunch of free door prizes! This is a long description that should get truncated.</div>
+			</div>
+		</a>
+		<a href="#" class="event">
+			<div class="event-date">
+				<div>MAR</div><div>12</div>
+			</div>
+			<div class="event-info">
+				<div class="event-name">Super Great Event Name</div>
+				<div class="event-description">This event features music, fun, and burritos. We also have a bunch of free door prizes! This is a long description that should get truncated.</div>
+			</div>
+		</a>
+		<a href="#" class="event">
+			<div class="event-date">
+				<div>MAR</div><div>15</div>
+			</div>
+			<div class="event-info">
+				<div class="event-name">Super Great Event Name</div>
+				<div class="event-description">This event features music, fun, and burritos. We also have a bunch of free door prizes! This is a long description that should get truncated.</div>
+			</div>
+		</a>
+
+		<div class="pagination">
+			<a href="#"><svg class="icon"><use xlink:href="images/sprite.svg#icon-chevron-left"></use></svg></a>
+			PAGE
+			<select>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+			<a href="#"><svg class="icon"><use xlink:href="images/sprite.svg#icon-chevron-right"></use></svg></a>
+		</div>
+
+	</div><!-- end .element-events -->
+
 	<div class="col-12 element-form">
+		<div class="element-title">Form</div>
 		<form action="">
 
 				<div class="legend">Fieldset Title</div>
@@ -200,11 +235,12 @@ $(coded).things(and > "stuff");
 
 	<div class="col-12 element-featured-text">
 		<div class="text">
-			Here is some nifty text. It's <i>featured</i>. Must be important!
+			<b>Featured Text.</b> Here is some nifty text. It's <i>featured</i>. Must be important!
 		</div>
 	</div><!-- end .element-code -->
 
 	<div class="col-12 element-photo-gallery">
+		<div class="element-title">Photo Gallery</div>
 		<div class="grid grid-pad" data-grid-min="200">
 			<div class="col-3">
 				<a href="images/1.jpg" data-image-zoom="group1" class="photo-gallery-image" style="background-image:url(images/1.jpg)">
@@ -246,12 +282,14 @@ $(coded).things(and > "stuff");
 	</div><!-- end .element-hero-->
 
 		<div class="col-12 element-video">
+			<div class="element-title">Video</div>
 			<div class="rwd-embed">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/dMcQidZdaOk" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div><!-- end .element-video -->
 
 		<div class="col-12 element-video-gallery">
+			<div class="element-title">Video Gallery</div>
 			<div class="grid grid-pad" data-grid-min="300">
 				<div class="col-4">
 					<div class="rwd-embed">
@@ -277,6 +315,7 @@ $(coded).things(and > "stuff");
 		</div>
 
 	<div class="col-12 element-reviews">
+		<div class="element-title">Reviews</div>
 		<div class="grid-720 grid-pad">
 			<div class="col-4">
 				<div class="card review">
@@ -319,8 +358,19 @@ $(coded).things(and > "stuff");
 			</div><!-- end .col-4-->
 		</div><!-- end .grid -->
 	</div><!-- end .reviews -->
+
+	<div class="col-12 element-slideshow">
+		<div class="element-title">Slideshow</div>
+		<div class="smoothslides" id="myslideshow1">
+			<img src="images/1.jpg" alt="Caption1" />
+			<img src="images/2.jpg" alt="Caption2"/>
+			<img src="images/3.jpg" alt="Caption3"/>
+			<img src="images/4.jpg" alt="Caption4"/>
+		</div>
+	</div>
 	
 	<div class="col-12 element-staff">
+		<div class="element-title">Staff</div>
 		<div class="grid grid-pad" data-grid-min="200">
 			<div class="col-3">
 				<a href="#" class="card">
@@ -353,7 +403,25 @@ $(coded).things(and > "stuff");
 		</div><!-- end .grid-->
 	</div><!-- end .element-staff -->
 
-
+	<div class="col-12 element-tabbed">
+		<div class="element-title">Tabbed Content</div>
+		<div class="tabs">
+			<a href="#">Tab1</a>
+			<a href="#">Tab2</a>
+			<a href="#">Tab3</a>
+		</div>
+		<div class="tab-content-wrap">
+			<div class="tab-content text-formatting">
+				1 This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet.
+			</div>
+			<div class="tab-content text-formatting">
+				2 This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet.
+			</div>
+			<div class="tab-content text-formatting">
+				3 This is placeholder text. It will get replaced with your actual content later on. We use this sample text to fill up a text area now, even though we don't have all of the content that we need yet.
+			</div>
+		</div>
+	</div><!-- end .element-tabbed -->
 
 	<div class="col-12 element-text">
 		<h1>Heading One</h1>
@@ -434,7 +502,12 @@ $(coded).things(and > "stuff");
 
 <script type="text/javascript">
 	$(window).on('load', function() {
-		 $('#calendar').monthly();
+		$('#calendar').monthly();
+
+		$('#myslideshow1').smoothSlides({
+			effectDuration: 3500,
+			pagination:false
+		});
 	});
 </script>
 

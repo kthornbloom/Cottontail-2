@@ -34,6 +34,14 @@ body {
 	border-radius:3px;
 }
 
+.element-title {
+	text-align: center;
+	font-weight: bold;
+	font-size:1.4em;
+	line-height: 1.2em;
+	padding:1em;
+}
+
 /* BUTTONS
 =========================================*/
 a.button {
@@ -88,6 +96,21 @@ a.button-small-alt {
 	}
 }
 
+/* PAGINATION
+=========================================*/
+.pagination {
+	text-align: center;
+	font-weight: bold;
+	font-size:.9em;
+	padding:.5em;
+	a:link, a:visited {
+		display: inline-block;
+		padding:0 .5em;
+	}
+	a:hover {
+		color:$highlight;
+	}
+}
 
 /* GRID SYSTEM
 =========================================*/
@@ -214,12 +237,14 @@ div[class*='align-cr'] {
 /* IMPORT
 =========================================*/
 @import 'nav';
+@import 'custom';
 @import 'element-text';
 @import 'element-accordion';
 @import 'element-code';
 @import 'element-carousel';
 @import 'monthly';
 @import 'element-document-list';
+@import 'element-events';
 @import 'element-form';
 @import 'element-featured-text';
 @import 'element-photo-gallery';
@@ -227,7 +252,10 @@ div[class*='align-cr'] {
 @import 'element-reviews';
 @import 'element-staff';
 @import 'element-video-gallery';
+@import 'element-tabbed';
 @import 'social-media';
+@import 'smoothslides.theme';
+
 /* EMBEDS
 =========================================*/
 .rwd-embed {
@@ -246,8 +274,6 @@ div[class*='align-cr'] {
 	width: 100%;
 	height: 100%;
 }
-
-
 
 /* MISC
 =========================================*/

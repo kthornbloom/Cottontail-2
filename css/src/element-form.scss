@@ -200,12 +200,7 @@
 			height: 18px;
 		}
 		.hovered {
-			svg {
-				fill:$highlight;
-				use, polygon, path{
-					fill:$highlight;
-				}
-			}
+			color:$highlight;
 		}
 		&:after {
 			content:'';

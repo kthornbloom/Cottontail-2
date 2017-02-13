@@ -72,6 +72,13 @@ body {
   padding: calc(15px * 2);
   border-radius: 3px; }
 
+.element-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  padding: 1em; }
+
 /* BUTTONS
 =========================================*/
 a.button, a.button-alt {
@@ -123,6 +130,19 @@ a.button-small-alt {
   fill: currentColor; }
   .icon use, .icon polygon, .icon path {
     fill: currentColor; }
+
+/* PAGINATION
+=========================================*/
+.pagination {
+  text-align: center;
+  font-weight: bold;
+  font-size: .9em;
+  padding: .5em; }
+  .pagination a:link, .pagination a:visited {
+    display: inline-block;
+    padding: 0 .5em; }
+  .pagination a:hover {
+    color: #8CAC3E; }
 
 /* GRID SYSTEM
 =========================================*/
@@ -477,6 +497,12 @@ div[class*='align-cr'] {
     top: -.05em;
     margin-right: 10px; }
 
+/* HEADER
+=========================================*/
+/* 
+=========================================*/
+/* FOOTER
+=========================================*/
 .text-formatting, .element-text, .accordion-result, .element-featured-text .text, .review {
   /* HEADINGS
   =========================================*/
@@ -1113,6 +1139,56 @@ establish the rules based on the calendar element width rather than the device w
     .document-list a:hover .icon {
       opacity: 1; }
 
+.event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em; }
+
+.event-date {
+  font-weight: bold;
+  border: 2px solid #ccc;
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
+  font-size: .9em;
+  text-align: center;
+  line-height: 1em;
+  padding-top: .7em;
+  /* The div containing the numerical day*/ }
+  .event-date div:nth-child(2n) {
+    font-size: 1.2rem; }
+
+.event-info {
+  padding-left: 1em;
+  min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.event-name {
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.event-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.event:hover .event-date {
+  border: 2px solid #8CAC3E; }
+.event:hover .event-name {
+  color: #8CAC3E; }
+
 .element-form {
   line-height: 1.5em;
   /* required */
@@ -1276,10 +1352,8 @@ establish the rules based on the calendar element width rather than the device w
     .element-form .rating-widget svg {
       width: 18px;
       height: 18px; }
-    .element-form .rating-widget .hovered svg {
-      fill: #8CAC3E; }
-      .element-form .rating-widget .hovered svg use, .element-form .rating-widget .hovered svg polygon, .element-form .rating-widget .hovered svg path {
-        fill: #8CAC3E; }
+    .element-form .rating-widget .hovered {
+      color: #8CAC3E; }
     .element-form .rating-widget:after {
       content: '';
       display: block;
@@ -1454,6 +1528,32 @@ establish the rules based on the calendar element width rather than the device w
 .element-video-gallery {
   padding: 15px 0 !important; }
 
+.element-tabbed .tabs {
+  border-bottom: 2px solid #8CAC3E; }
+  .element-tabbed .tabs a:link, .element-tabbed .tabs a:visited {
+    display: inline-block;
+    background: #eee;
+    padding: .75em 1em;
+    float: left;
+    margin-right: 1px; }
+  .element-tabbed .tabs a:hover {
+    background: #ccc; }
+  .element-tabbed .tabs a:link:first-of-type {
+    border-radius: 6px 0 0 0; }
+  .element-tabbed .tabs a:link:last-of-type {
+    border-radius: 0 6px 0 0; }
+  .element-tabbed .tabs:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .element-tabbed .tabs a.current-tab {
+    background: #8CAC3E;
+    color: #fff; }
+.element-tabbed .tab-content {
+  background: #eee;
+  padding: 1em;
+  display: none; }
+
 .social-media {
   padding: 1em;
   font-size: 2em; }
@@ -1528,6 +1628,192 @@ establish the rules based on the calendar element width rather than the device w
   #soc-youtube use, #soc-youtube polygon, #soc-youtube path {
     fill: #EE1C1B; }
 
+/* Outer Container */
+.smoothslides, .smoothslides-on {
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  min-height: 40px;
+  border-radius: 6px; }
+
+/* Outer Container Background (visible while loading) */
+.smoothslides {
+  background: rgba(255, 255, 255, 0.5); }
+
+/* Hide images until loaded */
+.smoothslides img {
+  display: none; }
+
+/* Loading animation keyframes */
+@keyframes throb {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+@-webkit-keyframes throb {
+  0% {
+    opacity: 0;
+    -webkittransform: scale(1); }
+  50% {
+    opacity: 1;
+    -webkittransform: scale(0.2); }
+  100% {
+    opacity: 0;
+    -webkittransform: scale(1); } }
+/* Loading animation */
+.smoothslides:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 50%;
+  top: 50%;
+  margin-left: -4px;
+  margin-top: -4px;
+  border-radius: 15px;
+  border: 2px solid #000;
+  animation: throb 1s infinite;
+  -webkit-animation: throb 1s infinite; }
+
+/* wrapper around all slides */
+.ss-slide-stage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  /* This fixes the bug in chrome where border-radius doesn't work with overflow hidden */
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); }
+
+/* wrapper around each slide */
+.ss-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  display: block;
+  width: 100%;
+  zoom: 1; }
+
+.ss-slide img {
+  height: auto;
+  /* max-width, or width gets set via JS */ }
+
+/* Caption wrapper. Used for centering */
+.ss-caption-wrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 5px 5px 5px;
+  text-align: center;
+  box-sizing: border-box; }
+
+/* Caption */
+.ss-caption {
+  min-height: 50px;
+  background: white;
+  background: rgba(255, 255, 255, 0.87);
+  color: #5A5A5A;
+  text-shadow: 0 0 10px #fff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4em;
+  border-radius: 3px;
+  padding-top: 15px;
+  box-sizing: border-box;
+  font-family: Veranda, sans-serif; }
+
+/* Previous and Next buttons */
+.smoothslides-on a.ss-prev, .smoothslides-on a.ss-next {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 14px;
+  line-height: 1em;
+  color: #A1A1A1;
+  text-decoration: none;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 3px;
+  opacity: .5;
+  -webkit-transition: .2s ease-out;
+          transition: .2s ease-out;
+  font-family: sans-serif; }
+
+.smoothslides-on a.ss-next {
+  left: auto;
+  right: 5px; }
+
+/* Highlight nav btns when hovering over the slideshow */
+.smoothslides-on:hover .ss-prev, .smoothslides-on:hover .ss-next {
+  opacity: 1; }
+
+.smoothslides-on .ss-prev:hover, .smoothslides-on .ss-next:hover {
+  background: #fff;
+  color: #000; }
+
+/* Pagination wrapper. Used for centering */
+.ss-paginate-wrap {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  text-align: center; }
+
+.ss-paginate {
+  display: inline-block;
+  line-height: 0; }
+
+/* Pagination dots */
+.ss-paginate a:link, .ss-paginate a:visited {
+  display: inline-block;
+  width: 16px;
+  height: 4px;
+  border-radius: 10px;
+  margin: 0 5px;
+  background: #ccc;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #fff;
+  -webkit-transition: .3s;
+          transition: .3s; }
+
+.ss-paginate a:hover {
+  background: #ddd;
+  background: rgba(0, 0, 0, 0.3); }
+
+.ss-paginate a.ss-paginate-current {
+  background: #000;
+  background: rgba(0, 0, 0, 0.5); }
+
+/* changes for smaller screens */
+@media (max-width: 600px) {
+  .ss-paginate-wrap {
+    bottom: -35px; }
+
+  .ss-caption {
+    min-height: 0;
+    padding: 5px;
+    font-size: 12px; }
+
+  a.ss-prev, a.ss-next {
+    bottom: auto;
+    top: 50%;
+    margin-top: -25px;
+    color: #000;
+    background: rgba(255, 255, 255, 0.3);
+    color: #444; }
+
+  .smoothslides-on, .ss-slide-stage {
+    border-radius: 0; } }
 /* EMBEDS
 =========================================*/
 .rwd-embed {
