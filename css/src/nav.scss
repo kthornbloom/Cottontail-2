@@ -1,6 +1,8 @@
 /* DESKTOP NAVIGATION STYLES
 ======================================================== */
 .nav-desktop {
+	max-width: 100%; /* required to calculate mobile width */
+	
 	>ul {
 		white-space: nowrap;
 		display: inline-block;

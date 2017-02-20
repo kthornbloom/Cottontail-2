@@ -189,51 +189,54 @@ a.button-small-alt {
 
 /* ALIGNMENT
 =========================================*/
-div[class*='align-tr'] {
+.align-tl {
+	display: flex;
+	align-items:flex-start;
+	justify-content:flex-start;
+}
+.align-tc {
+	display: flex;
+	align-items:flex-start;
+	justify-content:center;
+}
+.align-tr {
 	display: flex;
 	align-items:flex-start;
 	justify-content:flex-end;
 }
-div[class*='align-br'] {
+
+.align-cl {
 	display: flex;
-	align-items:flex-end;
-	justify-content:flex-end;
-}
-div[class*='align-bl'] {
-	display: flex;
-	align-items:flex-end;
+	align-items:center;
 	justify-content:flex-start;
 }
-div[class*='align-c'] {
+.align-c {
 	display: flex;
 	align-items:center;
 	justify-content:center;
 }
-div[class*='align-cl'] {
-	display: flex;
-	align-items:center;
-	justify-content:flex-start;
-}
-div[class*='align-cr'] {
+.align-cr {
 	display: flex;
 	align-items:center;
 	justify-content:flex-end;
 }
-@media screen and (max-width: 960px) {
-	.align-tr-960, .align-br-960, .align-bl-960, .align-c-960, .align-cr-960, .align-cl-960 {
-		display: block!important;
-	}
+
+.align-bl {
+	display: flex;
+	align-items:flex-end;
+	justify-content:flex-start;
 }
-@media screen and (max-width: 720px) {
-	.align-tr-720, .align-br-720, .align-bl-720, .align-c-720, .align-cr-720, .align-cl-720 {
-		display: block!important;
-	}
+.align-bc {
+	display: flex;
+	align-items:flex-end;
+	justify-content:center;
 }
-@media screen and (max-width: 512px) {
-	.align-tr-512, .align-br-512, .align-bl-512, .align-c-512, .align-cr-512, .align-cl-512 {
-		display: block!important;
-	}
+.align-br {
+	display: flex;
+	align-items:flex-end;
+	justify-content:flex-end;
 }
+
 /* IMPORT
 =========================================*/
 @import 'nav';
