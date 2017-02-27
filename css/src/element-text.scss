@@ -105,6 +105,74 @@
 		content: attr(data-title) "\00A0";
 			font-weight: bold;
 	}
+	/* THINGS TO CHANGE IN JR 4
+	=========================================*/
+	.embed-float-right {
+		float:right;
+		margin:0 0 30px 30px;
+		clear:both;
+	}
+	.embed-float-left {
+		float:left;
+		margin:0 30px 30px 0px;
+		clear:both;
+	}
+	.embed-float-center {
+		margin:15px auto;
+		clear:both;
+	}
+	.theme-img {
+		border-radius:6px;
+		box-shadow:0 0 5px #555;
+	}
+	.float-right, .float-left, .float-center, .float-normal {
+		max-width: 100%;
+		height:auto;
+		clear:both;
+	}
+	.float-right {
+		float:right;
+		margin:5px 0px 5px 15px;
+	}
+	.float-left {
+		margin:5px 15px 0px 5px;
+		float:left;
+	}
+	.float-center {
+		display: block;
+		margin: 10px auto;
+	}
+	.float-normal {
+		display:inline;
+	}
+	.theme-img {
+		border-radius:6px;
+		box-shadow:0 0 5px #555;
+	}
+	.align-right, .align-left, .align-center, .align-justify {
+		display: block;
+	}
+	.align-right {
+		text-align:right;
+	}
+	.align-left {
+		text-align: left;
+	}
+	.align-center {
+		text-align: center;
+	}
+	.align-justify {
+		text-align:justify;
+	}
+	figure {
+		display: block;
+		font-size: 1.4em;
+		line-height: 1.4em;
+		margin-bottom:5px;
+		background-color: #ccc;
+		padding: 15px;
+		border-radius: 3px;
+	}
 }
 .element-text {
 	@extend .text-formatting;
