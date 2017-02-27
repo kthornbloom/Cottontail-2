@@ -44,41 +44,48 @@ body {
 
 /* BUTTONS
 =========================================*/
-a.button {
+a.button, .button {
 	padding:.75em 3em;
 	border-radius:3em;
+	font-size:inherit;
+	outline: none;
+	border:0;
 	background: $highlight;
 	color:#fff;
 	display: inline-block;
 }
-a.button:hover {
+a.button:hover, .button:hover {
 	filter:brightness(1.2);
+	cursor: pointer;
 }
-a.button:active {
+a.button:active, .button:active {
 	filter:brightness(1.3);
 }
-a.button-alt {
-	@extend a.button;
+a.button-alt, .button-alt {
+	@extend a.button, .button;
 	background: #444;
 }
-a.button-small {
+a.button-small, .button-small {
 	display: inline-block;
 	padding:.25em 1em;
 	color:#fff;
 	font-size:.75em;
 	text-transform: uppercase;
+	outline: none;
+	border:0;
 	background: $highlight;
 	font-weight: bold;
 	border-radius:3em;
 }
-a.button-small:hover {
+a.button-small:hover, .button-small:hover {
 	filter:brightness(1.2);
+	cursor: pointer;
 }
-a.button-small:active {
+a.button-small:active, .button-small:active {
 	filter:brightness(1.3);
 }
-a.button-small-alt {
-	@extend a.button-small;
+a.button-small-alt, .button-small-alt {
+	@extend a.button-small, .button-small;
 	background: #444;
 }
 

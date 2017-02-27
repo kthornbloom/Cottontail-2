@@ -81,43 +81,50 @@ body {
 
 /* BUTTONS
 =========================================*/
-a.button, a.button-alt {
+a.button, a.button-alt, .button-alt, .button, a.button-alt, .button-alt {
   padding: .75em 3em;
   border-radius: 3em;
+  font-size: inherit;
+  outline: none;
+  border: 0;
   background: #8CAC3E;
   color: #fff;
   display: inline-block; }
 
-a.button:hover, a.button-alt:hover {
+a.button:hover, .button-alt:hover, .button:hover, .button-alt:hover {
   -webkit-filter: brightness(1.2);
-          filter: brightness(1.2); }
+          filter: brightness(1.2);
+  cursor: pointer; }
 
-a.button:active, a.button-alt:active {
+a.button:active, .button-alt:active, .button:active, .button-alt:active {
   -webkit-filter: brightness(1.3);
           filter: brightness(1.3); }
 
-a.button-alt {
+a.button-alt, .button-alt {
   background: #444; }
 
-a.button-small, a.button-small-alt {
+a.button-small, a.button-small-alt, .button-small-alt, .button-small, a.button-small-alt, .button-small-alt {
   display: inline-block;
   padding: .25em 1em;
   color: #fff;
   font-size: .75em;
   text-transform: uppercase;
+  outline: none;
+  border: 0;
   background: #8CAC3E;
   font-weight: bold;
   border-radius: 3em; }
 
-a.button-small:hover, a.button-small-alt:hover {
+a.button-small:hover, .button-small-alt:hover, .button-small:hover, .button-small-alt:hover {
   -webkit-filter: brightness(1.2);
-          filter: brightness(1.2); }
+          filter: brightness(1.2);
+  cursor: pointer; }
 
-a.button-small:active, a.button-small-alt:active {
+a.button-small:active, .button-small-alt:active, .button-small:active, .button-small-alt:active {
   -webkit-filter: brightness(1.3);
           filter: brightness(1.3); }
 
-a.button-small-alt {
+a.button-small-alt, .button-small-alt {
   background: #444; }
 
 /* ICONS
@@ -537,6 +544,8 @@ a.button-small-alt {
   /* LISTS
   =========================================*/
   /* TABLES
+  =========================================*/
+  /* THINGS TO CHANGE IN JR 4
   =========================================*/ }
   .text-formatting h1, .element-text h1, .accordion-result h1, .element-featured-text .text h1, .review h1, .text-formatting h2, .element-text h2, .accordion-result h2, .element-featured-text .text h2, .review h2, .text-formatting h3, .element-text h3, .accordion-result h3, .element-featured-text .text h3, .review h3, .text-formatting h4, .element-text h4, .accordion-result h4, .element-featured-text .text h4, .review h4, .text-formatting h5, .element-text h5, .accordion-result h5, .element-featured-text .text h5, .review h5, .text-formatting h6, .element-text h6, .accordion-result h6, .element-featured-text .text h6, .review h6 {
     line-height: 1.2em;
@@ -602,6 +611,56 @@ a.button-small-alt {
   .text-formatting .mobile-table td[data-title]:before, .element-text .mobile-table td[data-title]:before, .accordion-result .mobile-table td[data-title]:before, .element-featured-text .text .mobile-table td[data-title]:before, .review .mobile-table td[data-title]:before {
     content: attr(data-title) " ";
     font-weight: bold; }
+  .text-formatting .embed-float-right, .element-text .embed-float-right, .accordion-result .embed-float-right, .element-featured-text .text .embed-float-right, .review .embed-float-right {
+    float: right;
+    margin: 0 0 30px 30px;
+    clear: both; }
+  .text-formatting .embed-float-left, .element-text .embed-float-left, .accordion-result .embed-float-left, .element-featured-text .text .embed-float-left, .review .embed-float-left {
+    float: left;
+    margin: 0 30px 30px 0px;
+    clear: both; }
+  .text-formatting .embed-float-center, .element-text .embed-float-center, .accordion-result .embed-float-center, .element-featured-text .text .embed-float-center, .review .embed-float-center {
+    margin: 15px auto;
+    clear: both; }
+  .text-formatting .theme-img, .element-text .theme-img, .accordion-result .theme-img, .element-featured-text .text .theme-img, .review .theme-img {
+    border-radius: 6px;
+    box-shadow: 0 0 5px #555; }
+  .text-formatting .float-right, .element-text .float-right, .accordion-result .float-right, .element-featured-text .text .float-right, .review .float-right, .text-formatting .float-left, .element-text .float-left, .accordion-result .float-left, .element-featured-text .text .float-left, .review .float-left, .text-formatting .float-center, .element-text .float-center, .accordion-result .float-center, .element-featured-text .text .float-center, .review .float-center, .text-formatting .float-normal, .element-text .float-normal, .accordion-result .float-normal, .element-featured-text .text .float-normal, .review .float-normal {
+    max-width: 100%;
+    height: auto;
+    clear: both; }
+  .text-formatting .float-right, .element-text .float-right, .accordion-result .float-right, .element-featured-text .text .float-right, .review .float-right {
+    float: right;
+    margin: 5px 0px 5px 15px; }
+  .text-formatting .float-left, .element-text .float-left, .accordion-result .float-left, .element-featured-text .text .float-left, .review .float-left {
+    margin: 5px 15px 0px 5px;
+    float: left; }
+  .text-formatting .float-center, .element-text .float-center, .accordion-result .float-center, .element-featured-text .text .float-center, .review .float-center {
+    display: block;
+    margin: 10px auto; }
+  .text-formatting .float-normal, .element-text .float-normal, .accordion-result .float-normal, .element-featured-text .text .float-normal, .review .float-normal {
+    display: inline; }
+  .text-formatting .theme-img, .element-text .theme-img, .accordion-result .theme-img, .element-featured-text .text .theme-img, .review .theme-img {
+    border-radius: 6px;
+    box-shadow: 0 0 5px #555; }
+  .text-formatting .align-right, .element-text .align-right, .accordion-result .align-right, .element-featured-text .text .align-right, .review .align-right, .text-formatting .align-left, .element-text .align-left, .accordion-result .align-left, .element-featured-text .text .align-left, .review .align-left, .text-formatting .align-center, .element-text .align-center, .accordion-result .align-center, .element-featured-text .text .align-center, .review .align-center, .text-formatting .align-justify, .element-text .align-justify, .accordion-result .align-justify, .element-featured-text .text .align-justify, .review .align-justify {
+    display: block; }
+  .text-formatting .align-right, .element-text .align-right, .accordion-result .align-right, .element-featured-text .text .align-right, .review .align-right {
+    text-align: right; }
+  .text-formatting .align-left, .element-text .align-left, .accordion-result .align-left, .element-featured-text .text .align-left, .review .align-left {
+    text-align: left; }
+  .text-formatting .align-center, .element-text .align-center, .accordion-result .align-center, .element-featured-text .text .align-center, .review .align-center {
+    text-align: center; }
+  .text-formatting .align-justify, .element-text .align-justify, .accordion-result .align-justify, .element-featured-text .text .align-justify, .review .align-justify {
+    text-align: justify; }
+  .text-formatting figure, .element-text figure, .accordion-result figure, .element-featured-text .text figure, .review figure {
+    display: block;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    margin-bottom: 5px;
+    background-color: #ccc;
+    padding: 15px;
+    border-radius: 3px; }
 
 .accordion-topic {
   padding: 1em 1em 1em 0;
@@ -1358,18 +1417,8 @@ establish the rules based on the calendar element width rather than the device w
   .element-form input[type="submit"] {
     display: block;
     width: 100%;
-    text-align: center;
-    outline: none;
-    border: 0;
     margin-top: 1em;
-    background: #8CAC3E;
-    color: #fff;
-    font-size: 1rem;
-    padding: 15px;
-    border-radius: 3px; }
-  .element-form input[type="submit"]:hover {
-    background: rgba(140, 172, 62, 0.9);
-    cursor: pointer; }
+    /* Receives .button class CSS as well */ }
   .element-form .rating-widget {
     opacity: .7; }
     .element-form .rating-widget .star {

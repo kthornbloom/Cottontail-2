@@ -1,79 +1,149 @@
-Normal Grid
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Meta ===================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset='utf-8'>
+	<title>Cheatsheet</title>
+	<meta name="description" content="">
 
-<div class="grid grid-pad">
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-</div> 
-<div class="grid grid-pad">
-	<div class="col-4"><p>col-4</p></div> 
-	<div class="col-4"><p>col-4</p></div> 
-	<div class="col-4"><p>col-4</p></div> 
-</div> 
-<div class="grid grid-pad">
-	<div class="col-6"><p>col-6</p></div> 
-	<div class="col-6"><p>col-6</p></div> 
-</div> 
+	<!-- Favicon  ================================================= -->
+	<link rel="icon" href="favicon.png">
 
-<br><br>
+	<!-- CSS ====================================================== -->
+	<link rel="stylesheet" href="css/build/stylesheet.min.css">
+	<style>
+		.demo {
+			padding:30px;
+		}
+		.ico-example {
+			background: #eee;
+			border:1px solid #ccc;
+			width:100px;
+			padding:15px;
+			text-align: center;
+			display:inline-block;
+			font-size:10px;
+		}
+		.ico-example:hover {
+			background:#ccc;
+			cursor: pointer;
+		}
+		.ico-example .icon {
+			font-size:2rem;
+		}
+		.ico-example xmp {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<div class="text-formatting demo">
 
-Grids w/ breakpoints
+	<h1>Icons</h1>
+	(Click to copy the code to clipboard)
 
-<div class="grid-960 grid-pad">
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-</div> 
-<div class="grid-720 grid-pad">
-	<div class="col-4"><p>col-4</p></div> 
-	<div class="col-4"><p>col-4</p></div> 
-	<div class="col-4"><p>col-4</p></div> 
-</div> 
-<div class="grid-512 grid-pad">
-	<div class="col-6"><p>col-6</p></div> 
-	<div class="col-6"><p>col-6</p></div> 
-</div> 
+	<h3>Misc</h3>
 
-Grids w/ stepped breakpoints
+	<h3>Social Media</h3>
 
-<div class="grid-stepped-720 grid-pad">
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-</div> 
+	<h3>Arrows</h3>
 
-<div class="grid-stepped-512 grid-pad">
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-	<div class="col-1"><p>col-1</p></div> 
-</div> 
+	<div class="grid-stepped-512">
 
-Auto Grid!
+		<div class="ico-example col-1">
+			<svg class="icon"><use xlink:href="images/sprite.svg#icon-arrow-right-circle"></use></svg>
+			<br>Arrow Right Circle
+			<xmp><svg class="icon"><use xlink:href="images/sprite.svg#icon-arrow-right-circle"></use></svg></xmp>
+		</div>
 
+		<div class="ico-example col-1">
+			<svg class="icon"><use xlink:href="images/sprite.svg#icon-arrows-in"></use></svg>
+			<br>Arrows In
+			<xmp><svg class="icon"><use xlink:href="images/sprite.svg#icon-arrows-in"></use></svg></xmp>
+		</div>
 
-<div class="grid grid-pad data-grid-min="200"">
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-	<div class="col-2"><p>col-2</p></div> 
-</div> 
+	</div><!-- end .grid -->
+
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-arrows-out"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-chevron-down"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-chevron-up"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-chevron-left"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-chevron-right"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-blogger"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-check"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-cogs"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-document"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-download"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-external"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-facebook"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-file-text"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-flickr"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-google-plus"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-hamburger"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-instagram"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-link"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-linkedin"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-lock"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-paypal"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-pinterest"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-search"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-soundcloud"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-empty"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-full"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-star-half"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-times"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-tumblr"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-twitter"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-unlock"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-upload"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-vimeo"></use></svg>
+	<svg class="icon"><use xlink:href="images/sprite.svg#icon-youtube"></use></svg>
+
+	<h1>Grid Examples</h1>
+
+	<div class="grid grid-pad">
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+	</div>
+
+	<div class="grid-stepped-720 grid-pad">
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+	</div> 
+
+	<div class="grid grid-pad data-grid-min="200"">
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+		<div class="col-2"><p>col-2</p></div> 
+	</div>
+</div><!-- end .demo -->
+
+<!-- JS ======================================================= -->
+<script type="text/javascript" src="js/lib/jquery-3.1.1.min.js" ></script>
+<script type="text/javascript" src="js/build/production.min.js"></script>
+<script>
+$(window).on('load', function() {
+	$('.ico-example').on('click',function(){
+		var element = $(this).find('xmp');
+		var $temp = $("<input>");
+		$("body").append($temp);
+		$temp.val($(element).text()).select();
+		document.execCommand("copy");
+		$temp.remove();
+	})
+});
+</script>
+</body>
+</html>

@@ -171,20 +171,11 @@
 	input[type="submit"]{
 		display: block;
 		width:100%;
-		text-align: center;
-		outline: none;
-		border:0;
 		margin-top:1em;
-		background: $highlight;
-		color:#fff;
-		font-size: 1rem;
-		padding:$padding;
-		border-radius:$br;
+		/* Receives .button class CSS as well */
 	}
 
 	input[type="submit"]:hover {
-		background: rgba($highlight, .9);
-		cursor: pointer;
 	}
 
 	/* STAR RATINGS
