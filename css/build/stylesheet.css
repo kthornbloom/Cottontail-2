@@ -377,9 +377,7 @@ a.button-small-alt, .button-small-alt {
   .nav-desktop .icon {
     width: 1em;
     height: 1em;
-    fill: rgba(0, 0, 0, 0.5); }
-    .nav-desktop .icon use, .nav-desktop .icon polygon, .nav-desktop .icon path {
-      fill: rgba(0, 0, 0, 0.5); }
+    color: rgba(0, 0, 0, 0.5); }
   .nav-desktop .nav-parent > a:after {
     content: '';
     border: .3em solid transparent;
@@ -414,9 +412,7 @@ a.button-small-alt, .button-small-alt {
     .nav-desktop > ul > li:hover > a:link, .nav-desktop > ul > li:hover > a:visited {
       color: #fff; }
     .nav-desktop > ul > li:hover .icon {
-      fill: #fff; }
-      .nav-desktop > ul > li:hover .icon use, .nav-desktop > ul > li:hover .icon polygon, .nav-desktop > ul > li:hover .icon path {
-        fill: #fff; }
+      color: #fff; }
   .nav-desktop > ul > li ul {
     position: absolute;
     top: 100%;
@@ -1631,7 +1627,15 @@ establish the rules based on the calendar element width rather than the device w
 
 .social-media {
   padding: 1em;
-  font-size: 2em; }
+  font-size: 1.2em; }
+  .social-media a:link, .social-media a:visited {
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block; }
   .social-media a:hover {
     -webkit-filter: brightness(1.2);
             filter: brightness(1.2); }
@@ -1639,69 +1643,46 @@ establish the rules based on the calendar element width rather than the device w
 /* SOCIAL MEDIA
 =========================================*/
 #soc-blogger {
-  fill: #F49440; }
-  #soc-blogger use, #soc-blogger polygon, #soc-blogger path {
-    fill: #F49440; }
+  background: #F49440; }
 
 #soc-facebook {
-  fill: #3B5998; }
-  #soc-facebook use, #soc-facebook polygon, #soc-facebook path {
-    fill: #3B5998; }
+  background: #3B5998; }
 
 #soc-flickr {
-  fill: #FF1981; }
-  #soc-flickr use, #soc-flickr polygon, #soc-flickr path {
-    fill: #FF1981; }
+  background: #FF1981; }
 
 #soc-google-plus {
-  fill: #E04A39; }
-  #soc-google-plus use, #soc-google-plus polygon, #soc-google-plus path {
-    fill: #E04A39; }
+  background: #E04A39; }
 
 #soc-instagram {
-  fill: #BA3986; }
-  #soc-instagram use, #soc-instagram polygon, #soc-instagram path {
-    fill: #BA3986; }
+  background: #BA3986; }
 
 #soc-linkedin {
-  fill: #0976B4; }
-  #soc-linkedin use, #soc-linkedin polygon, #soc-linkedin path {
-    fill: #0976B4; }
+  background: #0976B4; }
 
 #soc-paypal {
-  fill: #00447E; }
-  #soc-paypal use, #soc-paypal polygon, #soc-paypal path {
-    fill: #00447E; }
+  background: #00447E; }
 
 #soc-pinterest {
-  fill: #BD081C; }
-  #soc-pinterest use, #soc-pinterest polygon, #soc-pinterest path {
-    fill: #BD081C; }
+  background: #BD081C; }
 
 #soc-soundcloud {
-  fill: #FF5510; }
-  #soc-soundcloud use, #soc-soundcloud polygon, #soc-soundcloud path {
-    fill: #FF5510; }
+  background: #FF5510; }
 
 #soc-tumblr {
-  fill: #36465D; }
-  #soc-tumblr use, #soc-tumblr polygon, #soc-tumblr path {
-    fill: #36465D; }
+  background: #36465D; }
 
 #soc-twitter {
-  fill: #1DA0F2; }
-  #soc-twitter use, #soc-twitter polygon, #soc-twitter path {
-    fill: #1DA0F2; }
+  background: #1DA0F2; }
 
 #soc-vimeo {
-  fill: #000; }
-  #soc-vimeo use, #soc-vimeo polygon, #soc-vimeo path {
-    fill: #000; }
+  background: #000; }
+
+#soc-yelp {
+  background: #D32323; }
 
 #soc-youtube {
-  fill: #EE1C1B; }
-  #soc-youtube use, #soc-youtube polygon, #soc-youtube path {
-    fill: #EE1C1B; }
+  background: #EE1C1B; }
 
 /* Outer Container */
 .smoothslides, .smoothslides-on {
@@ -1917,7 +1898,9 @@ establish the rules based on the calendar element width rather than the device w
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   pointer-events: none;
-  background: #fff !important;
-  color: #222 !important;
+  background: rgba(0, 0, 0, 0.81) !important;
+  color: #fff !important;
+  font-size: 10px !important;
   border-radius: 30px !important;
-  font-weight: bold; }
+  font-weight: 700;
+  width: 300px !important; }

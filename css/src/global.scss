@@ -288,14 +288,16 @@ a.button-small-alt, .button-small-alt {
 /* MISC
 =========================================*/
 #__bs_notify__ {
-	opacity:.7;
+opacity: .7;
 	position: fixed!important;
-	left:50%!important;
-	top:50%!important;
-	transform:translateX(-50%) translateY(-50%);
-	pointer-events:none;
-	background:#fff!important;
-	color:#222!important;
-	border-radius:30px!important;
-	font-weight: bold;
+	left: 50%!important;
+	top: 50%!important;
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	background: rgba(0, 0, 0, 0.81)!important;
+	color: #fff!important;
+	font-size: 10px!important;
+	border-radius: 30px!important;
+	font-weight: 700;
+	width: 300px!important;
 }

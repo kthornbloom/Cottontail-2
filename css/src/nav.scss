@@ -12,10 +12,7 @@
 	.icon {
 		width: 1em;
 		height: 1em;
-		fill:rgba(0,0,0,.5);
-		use, polygon, path{
-			fill:rgba(0,0,0,.5);
-		}
+		color:rgba(0,0,0,.5);
 	}
 	
 	/* PARENT ARROWS ======================*/
@@ -62,10 +59,7 @@
 			color:#fff;
 		}
 		.icon {
-			fill:#fff;
-			use, polygon, path{
-				fill:#fff;
-			}
+			color:#fff;
 		}
 	}
 

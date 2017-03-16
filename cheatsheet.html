@@ -17,8 +17,9 @@
 			padding:30px;
 		}
 		.ico-example {
-			background: #eee;
-			border:1px solid #ccc;
+			background: #e0e5ea;
+			color: #57636f;
+			border:1px solid #fff;
 			width:100px;
 			padding:15px;
 			text-align: center;
@@ -26,7 +27,8 @@
 			font-size:10px;
 		}
 		.ico-example:hover {
-			background:#ccc;
+			background: #cfd4da;
+			color: #3e4852;
 			cursor: pointer;
 		}
 		.ico-example .icon {
@@ -35,10 +37,15 @@
 		.ico-example xmp {
 			display: none;
 		}
+		.demogrid .col-2 {
+			background: #e0e5ea;
+			color: #57636f;
+			box-shadow:0 0 0 1px #fff;
+		}
 	</style>
 </head>
 <body>
-<div class="text-formatting demo">
+<div class="text-formatting demo centering">
 
 	<h1>Icons</h1>
 	(Click to copy the code to clipboard)
@@ -222,11 +229,53 @@
 		</div>
 
 		<div class="ico-example col-1">
+			<svg class="icon"><use xlink:href="images/sprite.svg#icon-yelp"></use></svg>
+			<br>Yelp
+			<xmp><svg class="icon"><use xlink:href="images/sprite.svg#icon-yelp"></use></svg></xmp>
+		</div>
+
+		<div class="ico-example col-1">
 			<svg class="icon"><use xlink:href="images/sprite.svg#icon-youtube"></use></svg>
 			<br>Youtube
 			<xmp><svg class="icon"><use xlink:href="images/sprite.svg#icon-youtube"></use></svg></xmp>
 		</div>
 		
+
+	</div>
+
+	<h3>Contact</h3>
+
+	<div class="grid-stepped-512">
+
+		<div class="ico-example col-1">
+			<svg class="icon"><use xlink:href="images/sprite.svg#icon-envelope"></use></svg>
+			<br>Envelope
+			<xmp><svg class="icon"><use xlink:href="images/sprite.svg#icon-envelope"></use></svg></xmp>
+		</div>
+
+		<div class="ico-example col-1">
+			<svg class="icon"><use xlink:href="images/sprite.svg#icon-smartphone"></use></svg>
+			<br>Smartphone
+			<xmp><svg class="icon"><use xlink:href="images/sprite.svg#icon-smartphone"></use></svg></xmp>
+		</div>
+
+		<div class="ico-example col-1">
+			<svg class="icon"><use xlink:href="images/sprite.svg#icon-phone"></use></svg>
+			<br>Phone
+			<xmp><svg class="icon"><use xlink:href="images/sprite.svg#icon-phone"></use></svg></xmp>
+		</div>
+
+		<div class="ico-example col-1">
+			<svg class="icon"><use xlink:href="images/sprite.svg#icon-map-marker"></use></svg>
+			<br>Map Marker
+			<xmp><svg class="icon"><use xlink:href="images/sprite.svg#icon-map-marker"></use></svg></xmp>
+		</div>
+
+		<div class="ico-example col-1">
+			<svg class="icon"><use xlink:href="images/sprite.svg#icon-clock"></use></svg>
+			<br>Clock
+			<xmp><svg class="icon"><use xlink:href="images/sprite.svg#icon-clock"></use></svg></xmp>
+		</div>
 
 	</div>
 
@@ -280,32 +329,70 @@
 	</div><!-- end .grid -->
 
 	<h1>Grid Examples</h1>
+	<div class="demogrid">
+		<h2>Regular grid with padding</h2>
+		<br>
+		<xmp>
+			<div class="grid grid-pad">
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+			</div>
+		</xmp>
 
-	<div class="grid grid-pad">
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-	</div>
+		<div class="grid grid-pad">
+			<div class="col-2"><p>col-2</p></div> 
+			<div class="col-2"><p>col-2</p></div> 
+			<div class="col-2"><p>col-2</p></div> 
+			<div class="col-2"><p>col-2</p></div> 
+			<div class="col-2"><p>col-2</p></div> 
+			<div class="col-2"><p>col-2</p></div> 
+		</div>
 
-	<div class="grid-stepped-720 grid-pad">
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-	</div> 
 
-	<div class="grid grid-pad data-grid-min="200"">
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
-		<div class="col-2"><p>col-2</p></div> 
+		<h2>Grid which reduces in steps</h2>
+		<br>
+		<xmp>
+			<div class="grid-stepped-720 grid-pad">
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+			</div> 
+		</xmp>
+			<div class="grid-stepped-720 grid-pad">
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+			</div> 
+		<h2>Grid that automatically fits the page best (via js)</h2>
+		<br>
+		<xmp>
+			<div class="grid grid-pad data-grid-min="200"">
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+			</div>
+		</xmp>
+			<div class="grid grid-pad data-grid-min="200"">
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+				<div class="col-2"><p>col-2</p></div> 
+			</div>
 	</div>
 </div><!-- end .demo -->
 

@@ -1,6 +1,15 @@
 .social-media {
 	padding:1em;
-	font-size:2em;
+	font-size:1.2em;
+	a:link, a:visited {
+		width:2em;
+		height: 2em;
+		text-align: center;
+		line-height: 2em;
+		border-radius:50%;
+		color:#fff;
+		display: inline-block;
+	}
 	a:hover {
 		filter:brightness(1.2);
 	}
@@ -8,81 +17,45 @@
 
 /* SOCIAL MEDIA
 =========================================*/
-#soc-blogger{
-	fill:#F49440;
-	use, polygon, path{
-		fill:#F49440;
-	}
+#soc-blogger {
+ background:#F49440;
 }
-#soc-facebook{
-	fill:#3B5998;
-	use, polygon, path{
-		fill:#3B5998;
-	}
+#soc-facebook	 {
+ background:#3B5998;
 }
-#soc-flickr{
-	fill:#FF1981;
-	use, polygon, path{
-		fill:#FF1981;
-	}
+#soc-flickr {
+ background:#FF1981;
 }
-#soc-google-plus{
-	fill:#E04A39;
-	use, polygon, path{
-		fill:#E04A39;
-	}
+#soc-google-plus {
+ background:#E04A39;
 }
-#soc-instagram{
-	fill:#BA3986;
-	use, polygon, path{
-		fill:#BA3986;
-	}
+#soc-instagram {
+ background:#BA3986;
 }
-#soc-linkedin{
-	fill:#0976B4;
-	use, polygon, path{
-		fill:#0976B4;
-	}
+#soc-linkedin {
+ background:#0976B4;
 }
-#soc-paypal{
-	fill:#00447E;
-	use, polygon, path{
-		fill:#00447E;
-	}
+#soc-paypal {
+ background:#00447E;
 }
-#soc-pinterest{
-	fill:#BD081C;
-	use, polygon, path{
-		fill:#BD081C;
-	}
+#soc-pinterest {
+ background:#BD081C;
 }
-#soc-soundcloud{
-	fill:#FF5510;
-	use, polygon, path{
-		fill:#FF5510;
-	}
+#soc-soundcloud {
+ background:#FF5510;
 }
-#soc-tumblr{
-	fill:#36465D;
-	use, polygon, path{
-		fill:#36465D;
-	}
+#soc-tumblr {
+ background:#36465D;
 }
-#soc-twitter{
-	fill:#1DA0F2;
-	use, polygon, path{
-		fill:#1DA0F2;
-	}
+#soc-twitter {
+ background:#1DA0F2;
 }
-#soc-vimeo{
-	fill:#000;
-	use, polygon, path{
-		fill:#000;
-	}
+#soc-vimeo {
+ background:#000;
 }
-#soc-youtube{
-	fill:#EE1C1B;
-	use, polygon, path{
-		fill:#EE1C1B;
-	}
+#soc-yelp {
+ background:#D32323;
+}
+#soc-youtube {
+ background:#EE1C1B;
 }

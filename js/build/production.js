@@ -297,16 +297,16 @@ tableChecker();
 function autogrid() {
 	$('[data-grid-min]').each(function(){
 		var that = this;
-		$(this).find('> div').css('width','');
+		$(this).find('> *').css('width','');
 		var fullWidth = parseInt($(that).width()),
-			colWidth = parseInt($(that).find('> div').width()),
+			colWidth = parseInt($(that).find('> *').width()),
 			minWidth = parseInt($(that).attr("data-grid-min")),
 			newWidth = parseInt(100 / (Math.floor(fullWidth / minWidth)));
 
 			if(fullWidth < minWidth){
-				$(that).find('> div').css('width','100%');
+				$(that).find('> *').css('width','100%');
 			} else if (colWidth < minWidth){
-				$(that).find('> div').css('width',newWidth+'%');
+				$(that).find('> *').css('width',newWidth+'%');
 			}
 	});
 }
