@@ -23,6 +23,21 @@
 	}
 }
 
+.event .event-date:nth-child(2){
+	margin-left:5px;
+	position: relative;
+	&:before {
+		content:'';
+		display: block;
+		height:2px;
+		width:5px;
+		position: absolute;
+		top:50%;
+		left:-7px;
+		background: #ccc;
+	}
+}
+
 .event-info {
 	padding-left:1em;
 	min-width: 0;
@@ -50,5 +65,8 @@
 	}
 	.event-name {
 		color:$highlight;
+	}
+	.event-date:nth-child(2):before {
+		background: $highlight;
 	}
 }

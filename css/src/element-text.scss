@@ -105,6 +105,17 @@
 		content: attr(data-title) "\00A0";
 			font-weight: bold;
 	}
+	
+	.hidden-table {
+		border:none;
+		background:none;
+		th, td, tr, tr:nth-child(2n) td, tr:nth-child(2n) {
+			color:inherit;
+			border:none;
+			background:none;
+		}
+	}
+
 	/* THINGS TO CHANGE IN JR 4
 	=========================================*/
 	.embed-float-right {
@@ -144,10 +155,6 @@
 	}
 	.float-normal {
 		display:inline;
-	}
-	.theme-img {
-		border-radius:6px;
-		box-shadow:0 0 5px #555;
 	}
 	.align-right, .align-left, .align-center, .align-justify {
 		display: block;

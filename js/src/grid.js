@@ -9,7 +9,7 @@ function autogrid() {
 
 			if(fullWidth < minWidth){
 				$(that).find('> *').css('width','100%');
-			} else if (colWidth < minWidth){
+			} else {
 				$(that).find('> *').css('width',newWidth+'%');
 			}
 	});

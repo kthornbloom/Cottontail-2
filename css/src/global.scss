@@ -34,7 +34,7 @@ body {
 	border-radius:3px;
 }
 
-.element-title {
+.title {
 	text-align: center;
 	font-weight: bold;
 	font-size:1.4em;
@@ -270,10 +270,12 @@ a.button-small-alt, .button-small-alt {
 =========================================*/
 .rwd-embed {
 	position: relative;
+	/*
 	padding-bottom: 56.25%;
 	padding-top: 35px;
 	height: 0;
 	overflow: hidden;
+	*/
 }
 .rwd-embed iframe,
 .rwd-embed object,
@@ -283,6 +285,35 @@ a.button-small-alt, .button-small-alt {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+.rwd-embed-overlay {display:none;}
+.rwd-embed-4-3 {
+	width: 100%;
+	padding-bottom: 75%;
+}
+.rwd-embed-16-9 {
+	width: 100%;
+	padding-bottom: 56.25%;
+}
+.rwd-embed-21-9 {
+	width: 100%;
+	padding-bottom: 42.86%;
+}
+
+.responsive-iframe-container {
+	position: relative;
+	padding-bottom: 56.25%; // This is the aspect ratio
+	height: 0;
+	overflow: hidden;
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
 }
 
 /* MISC
