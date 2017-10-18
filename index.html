@@ -62,7 +62,7 @@
 
 
 	<div class="element-accordion">
-		<div class="element-title">Accordion</div>
+		<div class="title">Accordion</div>
 		<div class="accordion-topic">Accordion Topic</div>
 		<div class="accordion-result">Accordion Result</div>
 		<div class="accordion-topic">Accordion Topic</div>
@@ -77,12 +77,12 @@
 	</div><!-- end .element-accordion -->
 
 	<div class="element-calendar">
-		<div class="element-title">Calendar</div>
+		<div class="title">Calendar</div>
 		<div class="monthly" id="calendar"></div>
 	</div><!-- end .element-calendar -->
 
 	<div class="element-carousel">
-		<div class="element-title">Carousel</div>
+		<div class="title">Carousel</div>
 		<ul class="carousel">
 			<li><img src="images/1.jpg" /></li>
 			<li><img src="images/2.jpg" /></li>
@@ -93,7 +93,7 @@
 	</div><!-- end .element-carousel -->
 
 	<div class="element-code">
-		<div class="element-title">Code</div>
+		<div class="title">Code</div>
 		<pre><code>
 This is where you can put
 $(coded).things(and > "stuff");
@@ -124,7 +124,7 @@ $(coded).things(and > "stuff");
 
 	<div class="element-events">
 
-		<div class="element-title">Events</div>
+		<div class="title">Events</div>
 
 		<a href="#" class="event">
 			<div class="event-date">
@@ -169,7 +169,7 @@ $(coded).things(and > "stuff");
 	</div><!-- end .element-events -->
 
 	<div class="element-form">
-		<div class="element-title">Form</div>
+		<div class="title">Form</div>
 		<form action="">
 
 				<div class="legend">Fieldset Title</div>
@@ -225,8 +225,8 @@ $(coded).things(and > "stuff");
 				</div>
 				<div class="col-4">
 					<label>Checkbox Group</label>
-					<input type="checkbox" name="group2" id="c1" value="1" /><label for="c1"> Yes</label>
-					<input type="checkbox" name="group2" id="c2" value="1" /><label for="c2"> No</label>
+					<input required type="checkbox" name="group2" id="c1" value="1" /><label for="c1"> Yes</label>
+					<input required type="checkbox" name="group2" id="c2" value="1" /><label for="c2"> No</label>
 				</div>
 				<div class="col-4 text-formatting">
 					Here's some text within a form. It should have full CSS styling available.
@@ -245,7 +245,7 @@ $(coded).things(and > "stuff");
 	</div><!-- end .element-code -->
 
 	<div class="element-photo-gallery">
-		<div class="element-title">Photo Gallery</div>
+		<div class="title">Photo Gallery</div>
 		<div class="grid grid-pad" data-grid-min="200">
 			<div class="col-3">
 				<a href="images/1.jpg" data-image-zoom="group1" class="photo-gallery-image" style="background-image:url(images/1.jpg)">
@@ -287,14 +287,14 @@ $(coded).things(and > "stuff");
 	</div><!-- end .element-hero-->
 
 		<div class="element-video">
-			<div class="element-title">Video</div>
+			<div class="title">Video</div>
 			<div class="rwd-embed">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/dMcQidZdaOk" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div><!-- end .element-video -->
 
 		<div class="element-video-gallery">
-			<div class="element-title">Video Gallery</div>
+			<div class="title">Video Gallery</div>
 			<div class="grid grid-pad" data-grid-min="300">
 				<div class="col-4">
 					<div class="rwd-embed">
@@ -320,7 +320,7 @@ $(coded).things(and > "stuff");
 		</div>
 
 	<div class="element-reviews">
-		<div class="element-title">Reviews</div>
+		<div class="title">Reviews</div>
 		<div class="grid-720 grid-pad">
 			<div class="col-4">
 				<div class="card review">
@@ -365,7 +365,7 @@ $(coded).things(and > "stuff");
 	</div><!-- end .reviews -->
 
 	<div class="element-slideshow">
-		<div class="element-title">Slideshow</div>
+		<div class="title">Slideshow</div>
 		<div class="smoothslides" id="myslideshow1">
 			<img src="images/1.jpg" alt="Caption1" />
 			<img src="images/2.jpg" alt="Caption2"/>
@@ -375,7 +375,7 @@ $(coded).things(and > "stuff");
 	</div>
 	
 	<div class="element-staff">
-		<div class="element-title">Staff</div>
+		<div class="title">Staff</div>
 		<div class="grid grid-pad" data-grid-min="200">
 			<div class="col-3">
 				<a href="#" class="card">
@@ -409,7 +409,7 @@ $(coded).things(and > "stuff");
 	</div><!-- end .element-staff -->
 
 	<div class="element-tabbed">
-		<div class="element-title">Tabbed Content</div>
+		<div class="title">Tabbed Content</div>
 		<div class="tabs">
 			<a href="#">Tab1</a>
 			<a href="#">Tab2</a>
@@ -508,6 +508,7 @@ $(coded).things(and > "stuff");
 
 <script type="text/javascript">
 	$(window).on('load', function() {
+		svg4everybody();
 		$('#calendar').monthly();
 
 		$('#myslideshow1').smoothSlides({

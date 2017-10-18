@@ -7,7 +7,7 @@
 
 .element-form {
 	line-height: 1.5em;
-	.grid {
+	.grid, .grid-720 {
 		background:#F3F3F3;
 	}
 	.legend {
@@ -83,17 +83,23 @@
 		border-bottom:2px solid $highlight;
 	}
 
-	textarea:required + label:after, input:not([type=submit]):not([type=radio]):not([type=checkbox]):required + label:after{
-		content:'*';
+	textarea:required + label:after, input:not([type=submit]):not([type=radio]):required + label:after{
+		content:' *';
 		color:#e37070;
 	}
 
 	/* RADIO BUTTONS
 	=========================================*/
+		/* hide defaults */
 	input[type="radio"], input[type="checkbox"] {
-		display: none;
+		opacity: 0;
+		position: absolute;
+		pointer-events: none;
+		transform: rotateX(90deg);
+		/* Not using display:none to keep them focusable */
 	}
 
+		/* pseudo button */
 	input[type="radio"] + label:before {
 		content:'';
 		display:inline-block;
@@ -107,6 +113,27 @@
 		text-align: center;
 		cursor:pointer;
 		transition:$transition-long;
+	}
+
+		/* required styling */
+	input[type="radio"]:required + label {
+		color: #e37070;
+			&:before {
+			border:1px solid #e37070;
+		}
+	}
+
+		/* required, valid styling */
+	input[type="radio"]:required:valid + label {
+		color: inherit;
+		&:before {
+			border:1px solid $highlight;
+		}
+	}
+
+		/* required, valid, but unchecked */
+	input[type="radio"]:required:valid:not(:checked) + label:before {
+			border:1px solid #555;
 	}
 
 	input[type="radio"] + label{
@@ -145,6 +172,20 @@
 		text-align: center;
 		cursor:pointer;
 		transition:$transition-short;
+	}
+
+	input[type="checkbox"]:required + label {
+		color:#e37070;
+		&:before {
+			border:1px solid #e37070;
+		}
+	}
+
+	input[type="checkbox"]:required:valid + label{
+		color:inherit;
+		&:before {
+			border:1px solid $highlight;
+		}
 	}
 
 	input[type="checkbox"] + label{
@@ -206,6 +247,13 @@
 		display: none;
 	}
 
+}
+
+.required {
+	&:after {
+		content:' *';
+		color:#e37070;
+	}
 }
 
 .form-success {

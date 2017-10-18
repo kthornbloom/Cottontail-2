@@ -26,7 +26,7 @@
 .carousel-buttons-wrap {
 	text-align: center;
 }
-.carousel-previous {
+.carousel-prev {
 	display: inline-block;
 	padding:.5rem 2rem;
 	background: #eee;
@@ -46,14 +46,14 @@
 }
 
 .carousel-next {
-	@extend .carousel-previous;
+	@extend .carousel-prev;
 	border-radius:0 20px 20px 0;
 	&:before {
 		transform:rotate(45deg);
 	}
 }
 
-.carousel-previous:hover,
+.carousel-prev:hover,
 .carousel-next:hover {
 	background: $highlight;
 	&:before {

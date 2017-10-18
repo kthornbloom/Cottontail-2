@@ -1,23 +1,24 @@
 .accordion-topic {
-	padding:1em 1em 1em 0;
+	padding:1em 1em 1em 3em;
 	background:rgba(0,0,0,.1);
 	margin-bottom: 1px;
 	cursor: pointer;
 	transition:$transition-short;
 	font-weight: bold;
+	position: relative;
 	&:before {
 		content: '+';
 		font-weight: 700;
-		display: inline-block;
-		width: 1em;
-		height: 1em;
-		font-size: 1.2em;
-		color: #555;
-		border-radius: 50%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 2.5em;
 		text-align: center;
-		line-height: 1em;
-		margin: 0 1em;
-		transition:$transition-short;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.2em;
 	}
 }
 .accordion-topic:hover {
