@@ -1,0 +1,38 @@
+.tabbed-wrapper {
+	.tabs {
+		background: $highlight;
+		color:#fff;
+		border:2px solid $highlight;
+		border-bottom:0;
+		white-space: nowrap;
+		overflow: auto;
+		a:link, a:visited {
+			display: inline-block;
+			padding:.75em 1em;
+			opacity: .65;
+			transition:.15s;
+			font-weight: bold;
+		}
+		a:hover {
+			opacity: .8;
+		}
+		&:after {
+			content:'';
+			display: block;
+			clear:both;
+		}
+		a.current-tab {
+			color:#222;
+			opacity: 1;
+			background: $common-background;
+		}
+	}
+	.tab-page {
+		padding:30px;
+		display: none;
+		background: $common-background;
+		border:2px solid $highlight;
+		border-top:0;
+		border-radius:0 0 4px 4px;
+	}
+}

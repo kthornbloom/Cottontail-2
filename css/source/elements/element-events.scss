@@ -1,0 +1,68 @@
+.element-events {
+
+}
+
+.event {
+	display: flex;
+	margin-bottom: 1em;
+	background: $common-background;
+	padding:5px;
+	transition:.15s;
+}
+
+.event-date {
+	font-weight: bold;
+	border:2px solid #fff;
+	width:3rem;
+	min-width: 3rem;
+	height: 3rem;
+	font-size:.9em;
+	text-align: center;
+	line-height: 1em;
+	padding-top:.7em;
+	/* The div containing the numerical day*/
+	div:nth-child(2n){
+		font-size:1.2rem;
+	}
+}
+
+.event .event-date:nth-child(2){
+	margin-left:5px;
+	position: relative;
+	&:before {
+		content:'';
+		display: block;
+		height:2px;
+		width:5px;
+		position: absolute;
+		top:50%;
+		left:-7px;
+		background: #fff;
+	}
+}
+
+.event-info {
+	padding-left:1em;
+	min-width: 0;
+	display: flex;
+	justify-content:center;
+	flex-direction:column;
+}
+
+.event-name {
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.event-description {
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.event:hover {
+	background: $highlight;
+	color:#fff;
+}

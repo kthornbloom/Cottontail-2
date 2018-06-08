@@ -25,9 +25,10 @@ module.exports = function(grunt) {
 		concat: {
 			dist: {
 				src: [
-					'js/src/*.js'
+					'js/source/*.js',
+					'js/source/elements/*.js'
 				],
-				dest: 'js/build/production.js'
+				dest: 'js/compiled/compiled.js'
 			}
 		},
 
@@ -35,8 +36,8 @@ module.exports = function(grunt) {
 		=========================================*/
 		uglify: {
 			build: {
-				src: 'js/build/production.js',
-				dest: 'js/build/production.min.js'
+				src: 'js/compiled/compiled.js',
+				dest: 'js/compiled/compiled.min.js'
 			}
 		},
 
@@ -45,7 +46,7 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					'css/build/stylesheet.css': 'css/src/global.scss'
+					'css/compiled/compiled.css': 'css/source/global.scss'
 				}
 			}
 		},
@@ -54,7 +55,7 @@ module.exports = function(grunt) {
 		=========================================*/
 		autoprefixer: {
             dist: {
-                src: 'css/build/stylesheet.css'
+                src: 'css/compiled/compiled.css'
             }
         },
 
@@ -64,9 +65,9 @@ module.exports = function(grunt) {
 			target: {
 				files: [{
 					expand: true,
-					cwd: 'css/build',
+					cwd: 'css/compiled',
 					src: ['*.css', '!*.min.css'],
-					dest: 'css/build',
+					dest: 'css/compiled',
 					ext: '.min.css'
 				}]
 			}
@@ -90,14 +91,14 @@ module.exports = function(grunt) {
 				},
 			},
 			css: {
-				files: ['css/src/*.scss'],
+				files: ['css/source/elements/*.scss','css/source/*.scss'],
 				tasks: ['sass','autoprefixer','cssmin'],
 				options: {
 				  spawn: false
 				}
 			},
 			js: {
-				files: ['js/src/*.js'],
+				files: ['js/source/*.js','js/source/elements/*.js'],
 				tasks: ['concat','uglify'],
 				options: {
 				  spawn: false
@@ -116,7 +117,7 @@ module.exports = function(grunt) {
 		/* SYNCRONIZE BROWSERS & LIVE INJECT CSS / UPDATE FOR JS & HTML
 		=========================================*/
 		browserSync: {
-		    files: ["js/build/*.js","css/build/*.css","css/build/*.css", "js/build/*.js", "*.html"],
+		    files: ["js/compiled/*.js","css/compiled/*.css", "*.html"],
 		    options: {
 				watchTask: true,
 		        server: './'

@@ -1,0 +1,202 @@
+/* DESKTOP NAVIGATION STYLES
+======================================================== */
+.nav-desktop {
+	max-width: 100%; /* required to calculate mobile width */
+
+	#currentpage {
+		color:#000;
+	}
+	
+	>ul {
+		white-space: nowrap;
+		display: inline-block;
+	}
+
+	/* PAGE TYPE ICONS =====================*/
+	.icon {
+		width: 1em;
+		height: 1em;
+		color:rgba(0,0,0,.5);
+	}
+	
+	/* PARENT ARROWS ======================*/
+	.nav-parent > a:after {
+		content: '';
+		border:.3em solid transparent;
+		border-left:.3em solid #222;
+		position: relative;
+		left:.2em;
+		text-align: center;
+		font-weight: 700;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1em;
+		font-size: 1.3em;
+		font-family: serif;
+		transition:.2s;
+	}
+	.nav-parent:hover > a:after {
+		transform:rotate(90deg);
+		top:.15em;
+		border-left:.3em solid #fff;
+	}
+
+	/* DROPDOWN ANIMATION ==================*/
+	li:hover {
+		>ul {
+			transform:scaleY(1);
+			transition:.2s;
+		}
+	}
+
+	/* TOP LEVEL ===========================*/
+	>ul>li {
+		display: inline-block;
+		position: relative;
+		>a:link, >a:visited {
+			display: block;
+			padding:1em;
+		}
+	}
+	>ul>li:hover {
+		background: $highlight;
+		>a:link, >a:visited {
+			color:#fff;
+		}
+		.icon {
+			color:#fff;
+		}
+	}
+
+	/* 2ND LEVEL ============================*/
+	>ul>li ul {
+		position: absolute;
+		top:100%;
+		left:0;
+		background: $common-background;
+		box-shadow:0 15px 30px rgba(0,0,0,.2);
+		transform:scaleY(0);
+		transform-origin:top left;
+		min-width: 100%;
+		text-align: left;
+		z-index: 100;
+		li {
+			min-width: 100%;
+			display: block;
+			position: relative;
+		}
+		a:link, a:visited {
+			display: block;
+			padding:1em;
+		}
+		li:hover {
+			background: $highlight;
+		}
+		li:hover > a, a:hover {
+			color:#fff;
+		}
+	}
+
+	>ul>li ul.menu-reposition {
+		left:auto;
+		right:0;
+	}
+
+	/* 3RD+ LEVEL ===========================*/
+	>ul>li>ul>li ul {
+		position: absolute;
+		top:0;
+		left:100%;
+		background: $common-background;
+		box-shadow:0 15px 30px rgba(0,0,0,.2);
+		min-width: 150px;
+		li {
+			position: relative;
+		}
+	}
+	>ul>li>ul>li ul.menu-reposition {
+		left:auto;
+		right:100%;
+	}
+}
+
+/* MOBILE NAVIGATION STYLES
+================================================================ */
+
+/* Button to open mobile nav */
+#hamburger {
+	display: none;
+	padding:1em;
+}
+
+.nav-mobile {
+	position: fixed;
+	z-index: 1000;
+	top:0;
+	left:-100vw;
+	width:100vw;
+	max-width: 100%;
+	height: 100vh;
+	background: $highlight;
+	overflow: auto;
+	//transition:.5s;
+
+	a:link, a:visited {
+		padding:1em;
+		display: block;
+		font-size:1.2em;
+		color:#fff;
+		border-bottom: 1px solid rgba(0,0,0,.2);
+	}
+
+	/* Back & Close buttons in mobile nav */
+	a.mobile-dropdown-back,
+	a.mobile-close {
+		background: rgba(0,0,0,.6);
+		font-size:.8em;
+		font-weight: bold;
+		text-align: right;
+		padding-right:1.2em;
+	}
+
+	/* Titles in mobile dropdown menus*/
+	.mobile-dropdown-title {
+		color: #fff;
+		font-size: 2em;
+		line-height: 2.4em;
+		padding: 1rem;
+		opacity: .6;
+		font-weight: 100;
+	}
+
+	/* DROPDOWN BACKGROUNDS ====================*/
+	>ul>li ul {
+		position: fixed;
+		z-index: 1000;
+		top:0;
+		left:-100vw;
+		width:100vw;
+		max-width: 100%;
+		height: 100vh;
+		background: $highlight;
+		box-shadow:inset -1px 0 0 rgba(0,0,0,.5);
+		overflow: auto;
+	}
+
+	/* PARENT ARROWS =============================*/
+	.nav-parent > a:before {
+		content: '';
+		border:2px solid #fff;
+		border-right:0px solid transparent;
+		border-bottom:0px solid transparent;
+		transform:rotate(-45deg);
+		transform-origin:center;
+		width:.5em;
+		height: .5em;
+		display: inline-block;
+		vertical-align: baseline;
+		position: relative;
+		top: -.05em;
+		margin-right:10px;
+	}
+}

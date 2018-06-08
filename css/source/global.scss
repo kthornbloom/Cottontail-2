@@ -1,0 +1,225 @@
+/* CSS RESET
+=========================================*/
+@import 'reset';
+
+/* COLORS
+=========================================*/
+$highlight:#8CAC3E; /* Used for highlights throughout */
+$common-background:#f0f0f5; /* Used for background colors on certain elements */
+
+/* OTHER VARIABLES
+=========================================*/
+$maxwidth: 1000px;
+
+/* GLOBAL MISC
+=========================================*/
+body {
+	font-size:14px;
+}
+.centering {
+	max-width: $maxwidth;
+	margin:0 auto;
+}
+
+[class*='element-'] {
+	padding:15px 0px;
+}
+
+.title {
+	text-align: center;
+	font-weight: bold;
+	font-size:1.4em;
+	line-height: 1.2em;
+	padding:1em;
+}
+
+/* GRID SYSTEM
+=========================================*/
+
+[class*='grid-'], .grid {
+	display: flex;
+	flex-wrap:wrap;
+	&:after {
+		content:'';
+		display: block;
+		clear:both;
+	}
+}
+.col-1 {width:8.33%}
+.col-2 {width:16.66%}
+.col-3 {width:25%}
+.col-4 {width:33.33%}
+.col-5 {width:41.66%}
+.col-6 {width:50%}
+.col-7 {width:58.33%}
+.col-8 {width:66.66%}
+.col-9 {width:75%}
+.col-10 {width:83.33%}
+.col-11 {width:91.66%}
+.col-12 {width:100%}
+.grid-filler {
+	padding:0!important;
+	margin:0!important;
+}
+
+@media screen and (max-width: 960px) {
+	.grid-960 [class*='col-'] {
+		width:100%;
+	}
+}
+@media screen and (max-width: 720px) {
+	.grid-720 [class*='col-'] {
+		width:100%;
+	}
+}
+@media screen and (max-width: 512px) {
+	.grid-512 [class*='col-'] {
+		width:100%;
+	}
+}
+
+/* PAGINATION
+=========================================*/
+.pagination {
+	text-align: center;
+	font-weight: bold;
+	font-size:.9em;
+	padding:.5em;
+	a:link, a:visited {
+		display: inline-block;
+		padding:0 .5em;
+	}
+	a:hover {
+		color:$highlight;
+	}
+}
+
+/* BUTTONS
+=========================================*/
+a.button, .button {
+	padding:.75em 3em;
+	margin-bottom:5px;
+	border-radius:4px;
+	font-size:inherit;
+	outline: none;
+	border:0;
+	background: $highlight;
+	color:#fff!important;
+	display: inline-block;
+}
+a.button:hover, .button:hover {
+	filter:brightness(1.2);
+	cursor: pointer;
+	text-decoration: none!important;
+}
+a.button:active, .button:active {
+	filter:brightness(1.3);
+}
+a.button-alt, .button-alt {
+	@extend .button;
+	background: #444;
+}
+a.button-small, .button-small {
+	display: inline-block;
+	padding:.25em 1em;
+	margin-bottom:5px;
+	color:#fff!important;
+	font-size:.75em;
+	text-transform: uppercase;
+	outline: none;
+	border:0;
+	background: $highlight;
+	font-weight: bold;
+	border-radius:4px;
+}
+a.button-small:hover, .button-small:hover {
+	filter:brightness(1.2);
+	cursor: pointer;
+	text-decoration: none!important;
+}
+a.button-small:active, .button-small:active {
+	filter:brightness(1.3);
+}
+a.button-small-alt, .button-small-alt {
+	@extend .button-small;
+	background: #444;
+}
+
+/* EMBEDS
+=========================================*/
+.rwd-embed {
+	position: relative;
+}
+.rwd-embed iframe,
+.rwd-embed object,
+.rwd-embed embed {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.rwd-embed-overlay {display:none;}
+.rwd-embed-4-3 {
+	width: 100%;
+	padding-bottom: 75%;
+}
+.rwd-embed-16-9 {
+	width: 100%;
+	padding-bottom: 56.25%;
+}
+.rwd-embed-21-9 {
+	width: 100%;
+	padding-bottom: 42.86%;
+}
+
+.responsive-iframe-container {
+	position: relative;
+	padding-bottom: 56.25%; // This is the aspect ratio
+	height: 0;
+	overflow: hidden;
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
+}
+
+/* ICONS
+=========================================*/
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+	fill:currentColor;
+	use, polygon, path{
+		fill:currentColor;
+	}
+}
+
+/* IMPORT ELEMENTS
+=========================================*/
+@import 'nav';
+@import 'stylesheet';
+@import 'elements/element-text';
+@import 'elements/element-accordion';
+@import 'elements/element-blog';
+@import 'elements/element-carousel';
+@import 'elements/element-calendar';
+@import 'elements/element-document-list';
+@import 'elements/element-events';
+@import 'elements/element-form';
+@import 'elements/element-featured-text';
+@import 'elements/element-photo-gallery';
+@import 'elements/element-reviews';
+@import 'elements/element-staff';
+@import 'elements/element-video-gallery';
+@import 'elements/element-tabbed';
+@import 'elements/element-slideshow';
+@import 'social-media';

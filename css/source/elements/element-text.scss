@@ -1,0 +1,226 @@
+.text-formatting {
+	/* HEADINGS
+	=========================================*/
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.2em;
+		margin:1em 0;
+	}
+	h1 {
+		font-size:2em;
+		color:$highlight;
+	}
+
+	h1:first-of-type {
+		margin-top:0;
+	}
+
+	h2 {
+		font-size:1.5em;
+	}
+
+	h3 {
+		font-size: 1.2em;
+	}
+
+	h4 {
+		font-weight: bold;
+	}
+
+	h5 {
+		font-size:.8em;
+		font-weight: bold;
+	}
+
+	h6 {
+		font-size:.65em;
+		font-weight: bold;
+	}
+
+	figure {
+		display: block;
+		font-size: 1.4em;
+		line-height: 1.4em;
+		margin-bottom:5px;
+		background-color: $common-background;
+		padding: 15px;
+		margin:1em 0;
+		border-radius: 3px;
+	}
+	blockquote {
+		display: block;
+		font-size: 1.4em;
+		line-height: 1.4em;
+		margin-bottom:5px;
+		background-color: $highlight;
+		color:#fff;
+		padding: 15px;
+		margin:1em;
+		border-radius: 3px;
+	}
+
+	/* LINKS
+	=========================================*/
+	a:link, a:visited {
+		color:$highlight;
+	}
+	a:hover, a:active {
+		text-decoration: underline;
+	}
+	/* LISTS
+	=========================================*/
+	ul, ol {
+		overflow: hidden;
+		padding:.5em .5em .5em 2em;
+	}
+
+	ul li {
+		list-style: disc;
+	}
+
+	ol li {
+		list-style: decimal;
+	}
+	/* TABLES
+	=========================================*/
+	table {
+		border-collapse: collapse;
+	}
+	thead {
+		th {
+			padding:1em;
+			text-align: left;
+			border:1px solid #fff;
+			background: $highlight;
+			color:#fff;
+		}
+	}
+	td {
+		padding:1em;
+		border:1px solid #fff;
+		background: $common-background;
+	}
+	tr:nth-child(2n) td {
+		background: rgba($common-background, .5);
+	}
+	.rt-wrap {
+		max-width: 100%;
+	}
+
+	.mobile-table {
+		border:1px solid #ccc;
+		max-width: 100%;
+	}
+
+	.mobile-table thead {
+		display: none;
+	}
+
+	.mobile-table tr,
+	.mobile-table td {
+		display: block;
+		box-sizing: border-box;
+		width:100%!important;
+		max-width: 100%;
+		border:none;
+		overflow: hidden;
+	}
+
+	.mobile-table td[data-title]:before {
+		content: attr(data-title) "\00A0";
+			font-weight: bold;
+	}
+	
+	.hidden-table {
+		border:none;
+		background:none;
+		th, td, tr, tr:nth-child(2n) td, tr:nth-child(2n) {
+			color:inherit;
+			border:none;
+			background:none;
+		}
+	}
+
+	/* THINGS TO CHANGE IN JR 4
+	=========================================*/
+	.embed-float-right {
+		float:right;
+		margin:0 0 30px 30px;
+		clear:both;
+	}
+	.embed-float-left {
+		float:left;
+		margin:0 30px 30px 0px;
+		clear:both;
+	}
+	.embed-float-center {
+		margin:15px auto;
+		clear:both;
+	}
+	.rwd-embed {
+		max-width:100%;
+		position: relative;
+	}
+	.rwd-aspect {
+		position: relative;
+		padding-bottom: 56.25%; // This is the aspect ratio
+		height: 0;
+		overflow: hidden;
+		iframe,
+		object,
+		embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
+	}
+	.theme-img {
+		border-radius:6px;
+		box-shadow:0 0 5px #555;
+	}
+	.float-right, .float-left, .float-center, .float-normal {
+		max-width: 100%;
+		height:auto;
+		clear:both;
+	}
+	.float-right {
+		float:right;
+		margin:5px 0px 5px 15px;
+	}
+	.float-left {
+		margin:5px 15px 0px 5px;
+		float:left;
+	}
+	.float-center {
+		display: block;
+		margin: 10px auto;
+	}
+	.float-normal {
+		display:inline;
+	}
+	.align-right, .align-left, .align-center, .align-justify {
+		display: block;
+	}
+	.align-right {
+		text-align:right;
+	}
+	.align-left {
+		text-align: left;
+	}
+	.align-center {
+		text-align: center;
+	}
+	.align-justify {
+		text-align:justify;
+	}
+
+}
+.element-text {
+	@extend .text-formatting;
+	&:after {
+		content:'';
+		display: block;
+		clear:both;
+	}
+}

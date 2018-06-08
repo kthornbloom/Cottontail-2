@@ -1,0 +1,8 @@
+.element-featured-text .text{
+	@extend .text-formatting;
+	font-size:1.5em;
+	line-height: 1.4em;
+	background: $common-background;
+	color:rgba(0,0,0,.65);
+	padding:1.5em;
+}

@@ -1,0 +1,21 @@
+.staff-img {
+	padding-top: 100%;
+	background-size: cover;
+	background-position: center;
+	border-radius:50%;
+	margin-bottom: 1em;
+}
+
+.element-staff {
+	.grid {
+		justify-content:center;
+	}
+	[class*='col-'] {
+		padding:30px;
+		min-width:200px;
+	}
+	a:link, a:visited {
+		text-align: center;
+		display: block;
+	}
+}

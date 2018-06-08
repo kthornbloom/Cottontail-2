@@ -1,0 +1,14 @@
+.blog-post-teaser {
+	display: block;
+	background: $common-background;
+	padding:15px;
+	transition:.15s;
+	h2:first-of-type {
+		margin:0;
+	}
+}
+
+.blog-post-teaser:hover {
+	background: $highlight;
+	color:#fff;
+}
