@@ -366,17 +366,19 @@ function mobilenavToggle(){
 	// Reset things that shouldn't be present in desktop view
 	$('.mobile-dropdown-back, .mobile-close, .parent-link').remove();
 	$('#hamburger').hide();
+	$('#home-header').removeClass('home-header-mobile');
 	$('.nav-mobile ul').css('transition','');
 	$('#main-nav').removeClass('nav-mobile').addClass('nav-desktop').css('transition','');
 
 	// Measure
-	var a = $('#main-nav').width(),
-		b = $('#main-nav ul').width();
-
+	var a = Math.ceil($('#main-nav').width()),
+		b = Math.ceil($('#main-nav ul').width());
+ console.log(a+' '+b);
 	// Toggle nav style
 	if (b>a){
-		$('#main-nav').removeClass('nav-desktop').addClass('nav-mobile').css('transition','.4s');
-		$('#hamburger').show().css('display','block');
+		$('#main-nav').removeClass('nav-desktop').addClass('nav-mobile');
+		$('#hamburger').show().css('display','inline-block');
+		$('#home-header').addClass('home-header-mobile');
 		setTimeout(function(){
 			$('.nav-mobile ul').css('transition','.4s');
 		}, 100);
@@ -384,7 +386,9 @@ function mobilenavToggle(){
 
 }
 // RUN ON LOAD
-mobilenavToggle();
+setTimeout(function(){
+	mobilenavToggle();
+}, 500);
 // Also runs within window-resize-functions.js
 
 /* OPEN MOBILE NAV
